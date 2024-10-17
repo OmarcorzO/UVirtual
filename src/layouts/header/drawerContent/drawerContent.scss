@@ -1,0 +1,71 @@
+.drawerContent {
+  .containerTab {
+    background-color: var(--colorBeige);
+    width: 90%;
+    margin: auto;
+
+    .contentTabs {
+      // background-color: aquamarine;
+      width: 370px;
+      padding-right: 2.8% /* 40px */;
+      margin-right: 4.8% /* 80px */;
+      overflow: initial;
+      border-color: #8a8a8e;
+
+      // BOTONES TAB
+      .MuiTabs-scroller {
+        .MuiTabs-flexContainer {
+          gap: 20px;
+
+          // BOTONES TAB
+          .MuiTab-root {
+            // background-color: red;
+            overflow: initial;
+            font-size: clamp(15px, 2dvw, 25px) !important;
+            font-family: Poppins !important;
+            font-weight: 400;
+            text-transform: capitalize;
+            align-self: baseline;
+            color: var(--colorGrey);
+          }
+
+          .Mui-selected {
+            color: var(--colorBlueDark);
+          }
+
+          // BOTONES FUERA DEL TAB
+          .btnsNoTab {
+            display: grid;
+            gap: 10px;
+            margin-top: 80px;
+            button {
+              width: 100%;
+              max-width: 252px;
+              padding: 15px 30px;
+            }
+          }
+        }
+
+        // SPAN DIVISOR
+        .MuiTabs-indicator {
+          background-color: var(--colorOrange);
+          left: 0;
+        }
+
+        // .MuiTabs-indicator {
+        //   background-color: var(--colorOrange);
+        //   height: 2px !important;
+        //   width: 50%;
+        //   margin-top: 55px /* 47px */;
+        //   left: 0;
+        //   right: auto;
+        //   transition: 0.3s ease-out;
+        // }
+      }
+    }
+
+    .viewTab {
+      width: 100%;
+    }
+  }
+}

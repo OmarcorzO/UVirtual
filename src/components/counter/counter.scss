@@ -1,0 +1,19 @@
+.counter {
+  justify-content: center;
+  text-align: start;
+  max-width: 1050px;
+  margin: auto;
+  padding: 4.9% /* 80px */;
+
+  // DIVIDER
+  .MuiDivider-root {
+    border-color: var(--colorGrey);
+  }
+
+  h1 {
+    font-weight: 600;
+  }
+  p {
+    color: var(--colorGrey);
+  }
+}

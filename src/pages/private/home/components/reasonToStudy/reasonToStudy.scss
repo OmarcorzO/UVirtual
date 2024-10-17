@@ -1,0 +1,20 @@
+.containerReasonToStudy {
+  text-align: center;
+  padding: 4.9% 0 /* 80px */;
+
+  // PRE TITULO
+  .pretitleRTS {
+    color: var(--colorBlueDark);
+    line-height: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  // TITULO
+  .titleRTS {
+    color: var(--colorBlueDark);
+    line-height: 120%; /* 72px */
+    max-width: 1100px;
+    margin: auto;
+  }
+}

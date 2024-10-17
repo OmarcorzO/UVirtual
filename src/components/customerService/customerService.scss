@@ -1,0 +1,54 @@
+.containerCustomerService {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 100px 0;
+
+  // PRETITULO
+  .pretitle {
+    color: var(--colorBlueDark);
+    line-height: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  // TITULO
+  .title {
+    color: var(--colorBlueDark);
+    line-height: 110%; /* 66px */
+    margin-bottom: 50px;
+  }
+
+  // SELECT
+  .MuiFormControl-root {
+    max-width: 800px;
+  }
+
+  // INPUT
+  .inputWhite {
+    max-width: 800px;
+  }
+
+  // CHECKBOX
+  .checkboxTerm {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+
+    strong {
+      color: var(--colorBlueLight);
+    }
+    .MuiFormControlLabel-asterisk {
+      color: var(--colorOrangeDark);
+    }
+  }
+
+  // BOTON INFO
+  .btnInfo {
+    width: 100%;
+    max-width: 800px;
+    height: 70px;
+  }
+}

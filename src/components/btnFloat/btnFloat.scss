@@ -1,0 +1,140 @@
+.btnFloat {
+  position: fixed !important;
+  bottom: 0;
+  right: 0;
+  margin: 0 60px 60px 0 !important;
+  z-index: 1 !important;
+  width: 75px !important;
+  height: 75px !important;
+  border-radius: 75px !important;
+  padding: 0 !important;
+}
+
+// BOTON FLOTANTE INVERTIDO
+.btnFloatInverter {
+  transform: rotate(180deg);
+}
+
+// CHATBOT
+.chatbot {
+  background-color: #fff;
+  width: 480px;
+  height: 780px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .chatbotHeader {
+    background: linear-gradient(94deg, #ffa600 0%, #e95d0f 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+
+    .sideIcon {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      p {
+        color: #fff;
+        text-align: center;
+        font-weight: 500;
+        line-height: 130%; /* 32.5px */
+      }
+    }
+  }
+
+  // CONTENIDO CHATBOT
+  .contentChatbot {
+    // background-color: pink;
+    padding: 30px 40px;
+    height: fit-content;
+    overflow: auto;
+    position: relative;
+
+    .note {
+      color: #8a8a8e;
+      text-align: center;
+      line-height: normal;
+      letter-spacing: -0.14px;
+      margin-bottom: 30px;
+    }
+
+    .contentForm {
+      display: grid;
+      gap: 20px;
+    }
+
+    // CHECKBOX
+    .checkboxTerm {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px 0;
+      align-items: flex-start;
+
+      strong {
+        color: var(--colorBlueLight);
+      }
+      .MuiFormControlLabel-asterisk {
+        color: var(--colorOrangeDark);
+      }
+    }
+
+    .btnEnter {
+      width: 100%;
+      max-width: 400px;
+      height: 65px;
+    }
+
+    // CHARLAR CON CHATBOT
+    .chatAnswer {
+      display: flex;
+      gap: 20px;
+
+      p {
+        background-color: var(--colorBeige);
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: var(--colorGrey);
+        width: fit-content;
+        line-height: normal;
+        letter-spacing: -0.14px;
+      }
+    }
+
+    // .inputChat {
+    // background-color: pink;
+    // position: absolute;
+    // bottom: 0;
+    // right: 0;
+    // left: 0;
+    // }
+  }
+
+  .chatbotFooter {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 30px 30px 30px;
+    gap: 10px;
+    align-items: center;
+
+    .inputChat {
+      width: -webkit-fill-available;
+    }
+
+    button {
+      padding: 10px;
+      height: fit-content;
+    }
+
+    .iconClip {
+      border: 1px solid var(--colorGrey);
+      border-radius: 10px;
+    }
+  }
+}

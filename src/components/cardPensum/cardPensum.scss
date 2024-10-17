@@ -1,0 +1,50 @@
+.contentCardPensum {
+  background-color: #fff;
+  width: 100%;
+  max-width: 395px;
+  height: 652px;
+  max-height: 652px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // IMAGEN
+  .img {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+  }
+
+  // INFO
+  .info {
+    // background-color: aqua;
+    height: 100%;
+    height: fill-available;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    padding: 40px;
+    text-align: center;
+
+    .description {
+      margin-bottom: 10px;
+    }
+
+    .stackInfo {
+      border-top: thin solid var(--colorGrey);
+    }
+  }
+
+  // VALUE
+  .value {
+    background-color: var(--colorBlueLight);
+    padding: 20px;
+    text-align: center;
+
+    p {
+      color: #fff;
+    }
+  }
+}

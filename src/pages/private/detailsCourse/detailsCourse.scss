@@ -1,0 +1,22 @@
+.cardNote {
+  background-color: #fff;
+  padding: 60px 5%;
+  display: grid;
+  gap: 60px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 1500px;
+  margin: 80px auto;
+  box-sizing: border-box;
+
+  .titleCardNote {
+    color: var(--colorBlueDark);
+    line-height: 120%; /* 72px */
+    max-width: 900px;
+  }
+
+  .descriptionCardNote {
+    color: var(--colorGrey);
+    max-width: 900px;
+  }
+}

@@ -1,0 +1,66 @@
+.cardItemNotification {
+  width: 100%;
+  max-width: 522px;
+  min-height: 308px;
+  border-radius: 20px;
+  border: 1px solid #8a8a8e;
+  // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  display: grid;
+  padding: 50px;
+
+  .titleCard {
+    color: var(--colorBlueDark);
+    font-weight: 500;
+    line-height: 110%; /* 27.5px */
+    margin-bottom: 20px;
+
+    font-size: clamp(20px, 1dvw, 25px) !important;
+    font-family: Poppins !important;
+    font-style: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .descriptionCard {
+    color: var(--colorGrey);
+    line-height: normal;
+    letter-spacing: -0.18px;
+    margin-bottom: 40px;
+  }
+
+  .btnCard {
+    border: 0.689px solid var(--colorBlueDark);
+    border-radius: 68.891px;
+    padding: 6.889px 20.667px;
+    color: var(--colorBlueDark);
+    text-transform: capitalize;
+    gap: 10px;
+    width: fit-content;
+
+    $time: 0.8s; /* TIEMPO */
+    transition-delay: $time;
+    transition: $time;
+    svg {
+      transition-delay: $time;
+      transition: $time;
+    }
+
+    // HOVER
+    &:hover {
+      padding-right: 28.667px !important;
+
+      svg {
+        transform: translateX(8px);
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .cardItemNotification {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,46 @@
+.containerInfoUndergraduate {
+  .title {
+    color: var(--colorBlueDark);
+    text-align: center;
+    line-height: 110%; /* 66px */
+  }
+
+  .description {
+    color: var(--colorGrey);
+    text-align: center;
+    line-height: normal;
+    margin: 20px auto 70px;
+    max-width: 1000px;
+  }
+}
+
+.containerCardsUndergraduate {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  // CHIP
+  .chipUndergraduate {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 0;
+
+    .MuiChip-filled {
+      background-color: var(--colorBlueLight);
+      color: #fff;
+    }
+
+    .MuiChip-outlined {
+      border: 1px solid var(--colorBlueLight);
+      color: var(--colorBlueLight);
+    }
+  }
+
+  // CONTENEDOR CARTA PENSUM
+  .containerCardPensum {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px 1.1%;
+  }
+}

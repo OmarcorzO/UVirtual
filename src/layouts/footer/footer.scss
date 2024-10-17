@@ -1,0 +1,186 @@
+.containerFooter {
+  padding: 3.9% 5% /* 80px 110px */;
+  display: grid;
+  gap: 50px;
+
+  // DIVIDER
+  .MuiDivider-root {
+    border-color: var(--colorGrey);
+    border-bottom-width: medium;
+  }
+
+  // IMFORMACION
+  .containerInfo {
+    gap: 20px 0;
+
+    .MuiGrid-item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      h3 {
+        color: var(--colorBlueDark);
+        font-family: Poppins;
+        font-weight: 500;
+      }
+
+      p,
+      button {
+        justify-content: flex-start;
+        width: fit-content;
+        min-width: auto;
+        padding: 0;
+
+        color: var(--colorGrey);
+        font-family: Poppins;
+        font-size: clamp(12px, 2vw, 16px) !important;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: -0.16px;
+        text-transform: capitalize;
+      }
+      button:hover {
+        background-color: transparent;
+      }
+
+      // SUSCRIBIRSE
+      .suscrib {
+        display: flex;
+        gap: 10px;
+
+        // INPUT
+        .MuiInputBase-root {
+          background-color: var(--colorWhite);
+          border-radius: 9px;
+          width: -webkit-fill-available;
+          input {
+            font-size: clamp(12px, 2dvw, 18px) !important;
+            font-family: Poppins;
+            font-weight: 300;
+            padding: 15px 25px;
+            color: var(--colorGrey);
+          }
+
+          div > button:hover {
+            background-color: transparent;
+          }
+
+          // FIELDSET
+          fieldset {
+            display: none;
+          }
+        }
+
+        // BOTON SUSCRIBIRSE
+        button {
+          background-color: var(--colorBlueDark);
+          padding: 16px;
+          border-radius: 10px;
+          gap: 8px;
+          height: fit-content;
+
+          font-size: clamp(12px, 2dvw, 20px) !important;
+          color: var(--colorWhite);
+        }
+      }
+    }
+  }
+
+  // ICONOS
+  .footerNav {
+    display: flex;
+    justify-content: space-between;
+
+    // COPYRIGHT
+    p {
+      color: var(--colorGrey);
+    }
+
+    .iconsFooter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 40px;
+      a {
+        line-height: normal;
+      }
+    }
+  }
+}
+
+/**************/
+/* RESPONSIVE */
+/**************/
+// WIDTH 900PX
+@media (max-width: 900px) {
+  .containerFooter {
+    .logoBlanco {
+      margin: auto;
+    }
+  }
+}
+// WIDTH 600PX
+@media (max-width: 600px) {
+  .containerFooter {
+    .logoBlanco {
+      width: 164px;
+    }
+
+    // INFORMACION
+    .containerInfo {
+      .MuiGrid-item {
+        // SUSCRIBIRSE
+        .suscrib {
+          // INPUT
+          .MuiInputBase-root {
+            input {
+              padding: 10px 20px !important;
+            }
+          }
+
+          // BOTON SUSCRIBIRSE
+          button {
+            padding: 7px !important;
+            svg {
+              width: 22px;
+              height: 22px;
+            }
+          }
+        }
+
+        p {
+          text-align: center;
+          width: auto;
+        }
+      }
+    }
+
+    // FOOTER ICON
+    .footerNav {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+
+// WIDTH 300PX
+@media (max-width: 300px) {
+  .containerFooter {
+    // INFORMACION
+    .containerInfo {
+      .MuiGrid-item {
+        // SUSCRIBIRSE
+        .suscrib {
+          flex-direction: column;
+
+          // BOTON SUSCRIBIRSE
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

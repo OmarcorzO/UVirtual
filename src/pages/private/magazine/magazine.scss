@@ -1,0 +1,48 @@
+.containerFilter {
+  display: flex;
+  gap: 20px;
+  max-width: 1068px;
+  width: 100%;
+  width: fill-available;
+  width: -o-available;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  margin: auto;
+
+  .inputWhite {
+    border-radius: 10px !important;
+  }
+
+  .inputSearch {
+    input {
+      padding: 23px 30px 23px 0;
+    }
+  }
+
+  .btnSearch {
+    padding: 6px 30px;
+  }
+}
+
+// WIDTH 600PX
+@media (max-width: 600px) {
+  .containerFilter {
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .selectWhite {
+      max-width: 100%;
+    }
+
+    .btnSearch {
+      height: 40px;
+    }
+  }
+}
+
+.containerCardsMagazine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 40px 1.1%;
+}

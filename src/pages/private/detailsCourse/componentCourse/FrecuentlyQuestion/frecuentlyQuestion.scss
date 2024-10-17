@@ -1,0 +1,12 @@
+.frecuentlyQuestion {
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  margin: 80px auto;
+
+  .title {
+    color: var(--colorBlueDark);
+    line-height: 110%; /* 66px */
+    text-align: center;
+  }
+}

@@ -1,0 +1,43 @@
+.containerIcons {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  width: fit-content;
+  max-width: 1300px;
+  margin: auto;
+  box-sizing: border-box;
+
+  div {
+    max-width: 350px;
+    text-align: center;
+
+    .MuiDivider-root {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border-color: var(--colorGrey);
+    }
+
+    p {
+      color: var(--colorGrey);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .containerIcons {
+    flex-direction: column;
+    gap: 40px;
+
+    div {
+      svg {
+        width: 60px;
+        height: 60px;
+      }
+
+      .MuiDivider-root {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

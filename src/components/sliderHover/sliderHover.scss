@@ -1,0 +1,128 @@
+// CONTENIDO SLIDER
+.sliderContent {
+  width: 1070px;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 29px;
+
+  // GRILLA
+  .gridContainerSlider {
+    flex-wrap: nowrap !important;
+    align-items: center;
+    height: 100% !important;
+
+    // CARD SLIDER
+    .cardSliderItem {
+      width: 160px /* 160px */;
+      height: 600px /* 400px */;
+      margin: 0 15px;
+      border-radius: 40px;
+      transition: 0.3s;
+      overflow: hidden;
+      position: relative;
+      background-position: center;
+      background-size: cover;
+
+      // IMAGEN DE LA CARTA UNIDADES
+      .imgUnit {
+        mix-blend-mode: color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+
+    .gradiant {
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      z-index: 1;
+      filter: blur(24.200000762939453px);
+    }
+
+    // DEGRADADO DEL SLIDER
+    .gradientCardSlider {
+      width: inherit;
+      height: inherit;
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+    }
+
+    // CONTENIDO DEL SLIDER
+    .contentSlider {
+      display: none;
+      margin: 0px 30px 40px;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      .titleSlider {
+        color: #ffffff;
+        // font-family: Mont-Bold !important;
+        line-height: 42px;
+      }
+
+      .contentTextSlider {
+        transition: 2s;
+        .descriptionSlider {
+          color: #ffffff;
+          line-height: 27px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .btnCard {
+        border: 0.689px solid #fff;
+        border-radius: 68.891px;
+        padding: 6.889px 20.667px;
+        color: #fff;
+        text-transform: capitalize;
+        gap: 10px;
+        width: fit-content;
+
+        $time: 0.8s; /* TIEMPO */
+        transition-delay: $time;
+        transition: $time;
+        svg {
+          transition-delay: $time;
+          transition: $time;
+        }
+
+        // HOVER
+        &:hover {
+          padding-right: 28.667px !important;
+
+          svg {
+            transform: translateX(8px);
+          }
+        }
+      }
+    }
+
+    // SLIDER ACTIVO
+    .cardSliderItemActive {
+      width: 750px /* 300px */;
+      height: 600px /* 480px */;
+
+      .contentSlider {
+        display: block;
+      }
+    }
+  }
+}
+
+// BOTONES SLIDER
+.btnSlider {
+  border-radius: 50px !important;
+  min-width: 50px !important;
+  height: 50px;
+}
+// BOTON SLIDER DESHABILITADO
+.btnSliderDisabled {
+  background-color: var(--colorBlueDark) !important;
+}
+// BOTON SLIDER ACTIVO
+.btnSliderActive {
+  background-color: #f2f2f2 !important;
+}

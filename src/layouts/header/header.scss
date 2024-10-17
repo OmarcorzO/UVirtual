@@ -1,0 +1,187 @@
+.containerHeader {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  // padding: 50px 100px; /* 2.5% 5% */
+  padding: 100px 5%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  
+  .btnIcon {
+    padding: "0px"
+    
+  }
+  .btnIcon:hover {
+    background-color: transparent;
+  }
+
+
+  .contentNav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      max-width: 900px;
+      gap: 25px;
+      margin-left: 30px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    p {
+      color: #fff;
+      text-decoration: none;
+      text-transform: none;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 1700px) {
+      .nav {
+        gap: 10px;
+      }
+    }
+    @media (max-width: 900px) {
+      .nav {
+        display: none;
+      }
+    }
+
+    .btnBurguer {
+      .iconBurguer {
+        width: 30px;
+      }
+    }
+
+    .btnInfo {
+      text-transform: uppercase !important;
+      padding: 15px 30px;
+      min-width: auto;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contentNav {
+    gap: 0px !important;
+    .btnInfo {
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+// DRAWER
+.MuiDrawer-root {
+  .MuiDrawer-paper {
+    background-color: var(--colorBeige);
+    height: 100%;
+    .containerDrawer {
+      padding: 3.8% 4.8% /* 80px 100px */;
+      height: auto;
+      display: grid;
+      gap: 80px;
+
+      // DRAWER HEADER
+      .drawerHeader {
+        // background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // BOTON REGRESAR
+        .btnBack {
+          color: var(--colorGrey);
+          text-transform: capitalize;
+          gap: 10px;
+          &:hover {
+            background-color: transparent;
+          }
+        }
+
+        div {
+          display: flex;
+          gap: 25px;
+          button {
+            padding: 15px 30px 14px !important;
+            text-transform: uppercase !important;
+            p {
+              font-weight: 600 !important;
+            }
+          }
+        }
+      }
+
+      // DRAWER CONTENT
+      // .drawerContent {
+      //   background-color: pink;
+      // }
+
+      // DRAWER FOOTER
+      .drawerFooter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btnWhatsapp {
+          border: 1px solid var(--colorGrey);
+          border-radius: 10px;
+          padding: 15px 30px;
+          color: var(--colorGrey);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          &:hover {
+            background-color: transparent;
+          }
+
+          p {
+            text-transform: capitalize;
+          }
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          button {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**************/
+/* RESPONSIVE */
+/**************/
+// WIDTH 1250px
+@media (max-width: 1250px) or (max-height: 800px) {
+  .containerHeader {
+    padding: 40px 70px;
+    .logoBlanco {
+      width: 164px;
+    }
+
+    .contentNav {
+      .btnInfo {
+        padding: 10px 20px;
+      }
+    }
+  }
+}

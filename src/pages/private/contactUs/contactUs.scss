@@ -1,0 +1,94 @@
+.containerContactUs {
+  // background-color: pink;
+  width: 100%;
+  max-width: 915px;
+  margin: auto;
+
+  h1 {
+    color: var(--colorBlueDark);
+    text-align: center;
+    line-height: 110%; /* 66px */
+  }
+
+  p {
+    color: var(--colorGrey);
+    text-align: center;
+    font-family: Poppins;
+    font-size: clamp(12px, 2dvw, 20px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .formContactUs {
+    margin: 7% auto /* 70px */;
+    display: grid;
+    gap: 20px;
+    max-width: 800px;
+
+    // INPUT
+    .inputWhite {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    // MULTILINEA
+    .multiline {
+      height: 194px;
+      align-items: flex-start;
+      padding: 23px 15px 23px 30px;
+
+      textarea {
+        font-size: clamp(12px, 2dvw, 18px);
+        font-family: Poppins;
+        font-weight: 400;
+        padding: 23px 30px;
+        color: var(--colorGrey);
+        padding: 0 !important;
+
+        &::placeholder {
+          color: var(--colorGrey);
+        }
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+
+    // ADORNO DE FINAL *
+    .MuiInputAdornment-positionEnd p {
+      color: red;
+    }
+
+    // CONTENIDO DE CELULAR - SELECT
+    .contentCel {
+      // SELECT
+      .selectWhite {
+        max-width: 166px;
+
+        .MuiInputLabel-root {
+          transform: translate(30px, 27px) scale(1);
+          display: flex;
+          gap: 10px;
+        }
+        div {
+          height: 100%;
+          height: fill-available;
+          height: -o-available;
+          height: -moz-available;
+          height: -webkit-fill-available;
+          margin: auto 0;
+        }
+      }
+    }
+
+    // BUTTON
+    button {
+      padding: 20px 30px;
+      p {
+        color: #fff !important;
+      }
+    }
+  }
+}

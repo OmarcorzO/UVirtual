@@ -1,0 +1,80 @@
+.containerSliderCommit {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 400px;
+  height: 100%;
+  height: fill-available;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  margin: auto;
+  padding: 0 80px;
+  text-align: center;
+  box-sizing: border-box;
+
+  // COMENTARIO
+  .commit {
+    color: var(--colorGrey);
+    line-height: normal;
+    letter-spacing: -0.32px;
+  }
+
+  // IMG PROFILE
+  .profileCommit {
+    border-radius: 100px;
+    margin: 40px 0;
+  }
+
+  // NOMBRE
+  .name {
+    color: var(--colorBlueDark);
+    font-weight: 500;
+    line-height: 110%; /* 27.5px */
+    margin: 20px 0;
+  }
+
+  // PROFESION
+  .profession {
+    color: var(--colorBlueDark);
+    line-height: 110%; /* 22px */
+  }
+
+  // BOTONES
+  button:hover {
+    background-color: var(--colorOrange);
+  }
+
+  // BOTON IZQUIERDO
+  .arrowLeft {
+    background-color: var(--colorOrange);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 75px;
+    height: 75px;
+
+    svg {
+      width: 2em;
+      height: 2em;
+      fill: #fff;
+    }
+  }
+
+  // BOTON DERECHO
+  .arrowRight {
+    background-color: var(--colorOrange);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: 75px;
+    height: 75px;
+
+    svg {
+      width: 2em;
+      height: 2em;
+      fill: #fff;
+    }
+  }
+}

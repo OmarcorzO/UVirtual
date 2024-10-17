@@ -1,0 +1,129 @@
+// BOTON PERFIL
+.btnProfile {
+  background-color: pink;
+  width: 100%;
+  max-width: 340px;
+  height: 100%;
+  max-height: 382px;
+  display: flex;
+  flex-direction: column;
+
+  .imgProfile {
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+  }
+
+  .title {
+    color: var(--colorBlueDark);
+    text-transform: capitalize;
+  }
+  .description {
+    color: var(--colorGrey);
+    text-transform: initial;
+  }
+}
+
+// MODAL
+.positionModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: -webkit-fill-available;
+
+  .cardModalTeacher {
+    background-color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 60px;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    max-height: 900px;
+    text-align: right;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    padding: 80px;
+
+    // BOTON X
+    .btnX {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: auto;
+      background-color: #f9f5ef;
+      margin: 30px 50px 0 0;
+      padding: 15px;
+    }
+
+    // CONTENEDOR INFO
+    .contentModalTeacher {
+      text-align: center;
+      display: grid;
+      gap: 30px;
+      overflow: auto;
+      box-sizing: border-box;
+      height: 100%;
+      height: fill-available;
+      height: -o-available;
+      height: -moz-available;
+      height: -webkit-fill-available;
+
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+
+      // IMAGEN
+      .imgProfile {
+        width: 250px;
+        height: 250px;
+        border-radius: 250px;
+        margin: auto;
+      }
+
+      // INFO PERSONAL
+      .infoPersonal {
+        .title {
+          color: var(--colorBlueLight);
+        }
+        .description {
+          color: var(--colorGrey);
+        }
+      }
+
+      // INFO HABILIDADES
+      .infoHabilities {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .title {
+          color: var(--colorBlueLight);
+          text-align: left;
+          margin-bottom: 10px;
+        }
+        .description {
+          color: var(--colorGrey);
+          text-align: left;
+        }
+
+        // SECCION 1
+        .section1 {
+          width: 100%;
+        }
+        // SECCION 2
+        .section2 {
+          width: 100%;
+          display: grid;
+          gap: 10px;
+        }
+      }
+      @media (max-width: 900px) {
+        .infoHabilities {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

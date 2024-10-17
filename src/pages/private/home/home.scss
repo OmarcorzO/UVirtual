@@ -1,0 +1,91 @@
+// OFERTA ACADEMICA
+.containerOfferAcademy {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  padding: 0 0 4.9% /* 80px */;
+
+  // PRE-TITULO
+  h3 {
+    color: var(--colorBlueDark);
+    line-height: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  // TITULO
+  h1 {
+    color: var(--colorBlueDark);
+    line-height: 110%; /* 66px */
+    max-width: 900px;
+    margin: 20px auto 70px;
+  }
+
+  // CONTENEDOR DE FILTRO
+  .containerFilter {
+    display: flex;
+    gap: 20px;
+
+    // BOTON BUSCAR
+    .btnSearch {
+      padding: 0 30px;
+      min-width: auto;
+    }
+  }
+}
+
+// RESPONSIVE
+// WIDTH 1000PX
+@media (max-width: 1000px) {
+  .containerOfferAcademy {
+    .containerFilter {
+      flex-wrap: wrap;
+      .MuiFormControl-root {
+        width: -webkit-fill-available;
+        max-width: -webkit-fill-available;
+      }
+
+      // BOTON BUSCAR
+      .btnSearch {
+        width: 100%;
+        height: 60px;
+      }
+    }
+  }
+}
+
+// CONTENEDOR SLIDER
+.containerSlider {
+  max-width: 1500px;
+  margin: 40px auto;
+
+  .pretitle {
+    color: var(--colorBlueDark);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  .title {
+    color: var(--colorBlueDark);
+    line-height: 120%; /* 72px */
+    margin: 20px auto;
+  }
+
+  .description {
+    color: var(--colorGrey);
+    letter-spacing: -0.18px;
+  }
+
+  // CONTENIDO DEL SLIDER
+  .contentSlider {
+    max-width: 1080px;
+    margin: 40px auto 0;
+  }
+
+  // BOTON
+  .btnInfo {
+    padding: 15px 30px;
+    gap: 10px;
+    margin-top: 40px;
+  }
+}
