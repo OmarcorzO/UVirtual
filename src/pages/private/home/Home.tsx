@@ -21,6 +21,7 @@ import {
   imgSliderDoctorate,
   selectArea,
   selectTipo,
+  imgSliderMastery,
 } from "../../../components/dataApi/DataApi";
 import Microcertifications from "./components/microcertifications/Microcertifications";
 import ReasonToStudy from "./components/reasonToStudy/ReasonToStudy";
@@ -225,6 +226,52 @@ const Home = () => {
               onClick={() => navigate("/doctorate")}
             >
               EXPLORAR DOCTORADOS <IconArrowUpRight />
+            </Button>
+          </Box>
+        </Box>
+
+        {/*********************/}
+        {/* SLIDER MAESTRIAS */}
+        {/*********************/}
+        <Box className="containerSlider">
+          {/*************/}
+          {/* PRETITULO */}
+          {/*************/}
+          <Typography className="pretitle size16">Maestrias</Typography>
+
+          {/**********/}
+          {/* TITULO */}
+          {/**********/}
+          <Typography className="title size60">
+            Formaliza tu aprendizaje de forma ágil y activa
+          </Typography>
+
+          {/***************/}
+          {/* DESCRIPTION */}
+          {/***************/}
+          <Typography className="description size18">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </Typography>
+
+          {/**********/}
+          {/* SLIDER */}
+          {/**********/}
+          <Box className="contentSlider">
+            <SliderHover items={imgSliderMastery} />
+
+            <br />
+            {/*********/}
+            {/* BOTON */}
+            {/*********/}
+            <Button
+              disableTouchRipple
+              className="btnInfo btnGradientOrangeCircle size16"
+              onClick={() => navigate("/mastery")}
+            >
+              EXPLORAR MAESTRIAS <IconArrowUpRight />
             </Button>
           </Box>
         </Box>

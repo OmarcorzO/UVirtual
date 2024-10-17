@@ -14,6 +14,8 @@ import Doctorate from "../pages/private/doctorate/Doctorate";
 import ContactUs from "../pages/private/contactUs/ContactUs";
 import TeachingStaff from "../pages/private/teachingStaff/TeachingStaff";
 import Magazine from "../pages/private/magazine/Magazine";
+import Programs from "../pages/private/programs/Programs";
+import Mastery from "../pages/private/mastery/Mastery";
 
 const AppRoutes = () => {
   const routes = useRoutes([
@@ -67,15 +69,25 @@ const AppRoutes = () => {
           path: "details-course",
           element: <DetailsCourse />,
         },
-        // GRADUADOS
+        // CARRERAS
         {
           path: "undergraduate",
-          element: <Undergraduate />,
+          element: <Programs />,
         },
         // DOCTORADOS
         {
           path: "doctorate",
           element: <Doctorate />,
+        },
+        // MAESTRIAS
+        {
+          path: "mastery",
+          element: <Mastery />,
+        },
+        // CURSOS
+        {
+          path: "courses",
+          element: <Undergraduate />,
         },
         // CONTACTANOS
         {

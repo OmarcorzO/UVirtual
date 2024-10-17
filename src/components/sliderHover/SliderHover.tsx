@@ -17,6 +17,7 @@ import IconArrowLeft from "../../assets/icons/IconArrowLeft";
 import IconArrowRight from "../../assets/icons/IconArrowRight";
 
 const Sliders = ({ items }: SliderLevelProps) => {
+  console.log(items)
   const [itemActive, setItemActive] = useState(0);
   const [translate, setTranslate] = useState(0);
 
@@ -99,7 +100,7 @@ const Sliders = ({ items }: SliderLevelProps) => {
                     {/*********/}
                     {/* BOTON */}
                     {/*********/}
-                    <Button disableTouchRipple className="btnCard size16">
+                    <Button disableTouchRipple className="btnCard size16" href={`${item.path}?${item.code}&${index}`}>
                       Explorar <IconArrowRight color="#fff" />
                     </Button>
                   </Box>

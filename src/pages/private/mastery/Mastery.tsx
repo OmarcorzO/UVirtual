@@ -17,7 +17,7 @@ import {
 // IMPORTADOS
 import "../undergraduate/undergraduate.scss";
 import {
-  pensumDoctorate,
+  pensumMastery,
   selectArea,
 } from "../../../components/dataApi/DataApi";
 import Banner from "../../../components/banner/Banner";
@@ -27,7 +27,7 @@ import IconSearch from "../../../assets/icons/IconSearch";
 import CardPensum from "../../../components/cardPensum/CardPensum";
 import PaginationComponent from "../../../components/pagination/Pagination";
 
-const Doctorate = () => {
+const Mastery = () => {
   const [age, setAge] = useState("");
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -130,7 +130,7 @@ const Doctorate = () => {
           {/* PENSUM */}
           {/**********/}
           <Box className="containerCardPensum">
-            {pensumDoctorate.map((item, index) => (
+            {pensumMastery.map((item, index) => (
               <CardPensum
                 code={item.code}
                 key={index}
@@ -165,4 +165,4 @@ const Doctorate = () => {
   );
 };
 
-export default Doctorate;
+export default Mastery;

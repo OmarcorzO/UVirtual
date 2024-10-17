@@ -13,11 +13,31 @@ import {
 // IMPORTADOS
 import "./contentProgram.scss";
 import IconDownload from "../../../../../assets/icons/IconDownload";
-import { selectArea } from "../../../../../components/dataApi/DataApi";
+import {
+  pensumPrograms,
+  pensumDoctorate,
+  pensumMastery,
+  selectArea,
+} from "../../../../../components/dataApi/DataApi";
 import { useState } from "react";
 import IconArrowUpRight from "../../../../../assets/icons/IconArrowUpRight";
 
-const ContentProgram = () => {
+interface ContentProgramProps {
+  codeData: string;
+  posData: number;
+}
+
+const validatePensum = (code: string) => {
+  if (code === "program") {
+    return pensumPrograms;
+  } else if (code === "mastery") {
+    return pensumMastery;
+  } else if (code === "doctorate") {
+    return pensumDoctorate;
+  }
+};
+
+const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
   const [age, setAge] = useState("");
 
   // SELECT
@@ -45,22 +65,18 @@ const ContentProgram = () => {
           {/* DESCRIPTION */}
           {/***************/}
           <Typography className="description size20">
-            Este programa está diseñado para aquellos apasionados por
-            transformar la educación y hacer contribuciones significativas al
-            campo pedagógico. Nuestro enfoque integral combina teoría educativa
-            avanzada, metodologías innovadoras y prácticas basadas en la
-            evidencia. A lo largo de tu viaje académico, trabajarás de cerca con
-            profesores destacados y colaborarás en investigaciones que abordan
-            los desafíos contemporáneos de la educación. Prepárate para liderar
-            el cambio, influir en políticas educativas y convertirte en un líder
-            visionario. en el ámbito educativo. Únete a nosotros y transforma tu
-            pasión por la educación en una carrera en constante evolución.
+            {validatePensum(codeData)![posData].longDescription}
           </Typography>
 
           {/****************************/}
           {/* BOTON DESCARGAR PROGRAMA */}
           {/****************************/}
-          <Button disableTouchRipple className="btnGradientOrangeCircle">
+          <Button
+            disableTouchRipple
+            className="btnGradientOrangeCircle"
+            href={validatePensum(codeData)![posData]?.anexe}
+            target="_blank"
+          >
             <IconDownload />
 
             <Typography className="size16">

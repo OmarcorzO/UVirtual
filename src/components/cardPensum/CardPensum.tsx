@@ -4,6 +4,7 @@ import { Box, Divider, Paper, Stack, styled, Typography } from "@mui/material";
 import "./cardPensum.scss";
 
 interface CardPensumProps {
+  code?: string;
   img?: string;
   title?: string;
   description?: string;
@@ -15,6 +16,7 @@ interface CardPensumProps {
   dateLast?: string;
   value?: string;
   footer?: string;
+  index?: number;
 }
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -28,6 +30,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const CardPensum = ({
+  code,
   img,
   title,
   description,
@@ -38,8 +41,10 @@ const CardPensum = ({
   dateFirst,
   dateLast,
   value,
-  footer
+  footer,
+  index
 }: CardPensumProps) => {
+  console.log(index)
   return (
     <Box className="contentCardPensum">
       {/**********/}
@@ -60,7 +65,7 @@ const CardPensum = ({
         {/* DESCRIPTION */}
         {/***************/}
         <Typography className="description size16">
-          {description} <a href={path}>Ver más</a> 
+          {description} <a href={code === "program" || code === "doctorate" || code === "mastery" ? `${path}?${code}&${index}` : `${path}`}>Ver más</a> 
         </Typography>
 
         {/*****************/}
