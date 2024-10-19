@@ -42,8 +42,10 @@ const Undergraduate = () => {
       {/**********/}
       <Banner
         urlImage={ImgBanner}
-        title="Licenciatura en Educación"
-        description="Logra convertirte en un profesional que sepa evaluar las necesidades educativas de la sociedad."
+        title="Microcertificaciones"
+        description="Nuestras microcertificaciones permiten centrarse en áreas técnicas o
+        habilidades prácticas en sectores como la tecnología, el marketing
+        digital, la gestión de proyectos, entre otros."
       />
 
       {/********/}
@@ -76,28 +78,6 @@ const Undergraduate = () => {
           {/* CONTENEDOR DE FILTRO */}
           {/************************/}
           <Box className="containerFilter">
-            {/****************/}
-            {/* ESPECIALIDAD */}
-            {/****************/}
-            <FormControl className="selectWhite">
-              <InputLabel id="demo-simple-select-label" className="size18">
-                Especialidad
-              </InputLabel>
-
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                onChange={handleChange}
-              >
-                {selectArea.map((item, index) => (
-                  <MenuItem key={index} value={item.value} className="size18">
-                    {item.title}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
             {/**********/}
             {/* BUSCAR */}
             {/**********/}
@@ -152,6 +132,7 @@ const Undergraduate = () => {
           <Box className="containerCardPensum">
             {pensumCourses.map((item, index) => (
               <CardPensum
+                code={item.code}
                 key={index}
                 img={item.img}
                 title={item.title}
@@ -164,6 +145,7 @@ const Undergraduate = () => {
                 dateLast={item.dateLast}
                 value={item.value}
                 footer={item.footer}
+                index={index}
               />
             ))}
           </Box>

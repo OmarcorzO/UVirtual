@@ -59,13 +59,13 @@ const CardPensum = ({
         {/**********/}
         {/* TITULO */}
         {/**********/}
-        <Typography className="title size25">{title}</Typography>
+        <Typography className="title size20">{title}</Typography>
 
         {/***************/}
         {/* DESCRIPTION */}
         {/***************/}
         <Typography className="description size16">
-          {description} <a href={code === "program" || code === "doctorate" || code === "mastery" ? `${path}?${code}&${index}` : `${path}`}>Ver más</a> 
+          {description} <a href={code === "program" || code === "doctorate" || code === "mastery" || code === "course" ? `${path}?${code}&${index}` : `${path}`}>Ver más</a> 
         </Typography>
 
         {/*****************/}
@@ -116,7 +116,7 @@ const CardPensum = ({
       {/* VALOR */}
       {/*********/}
       <Box className="value">
-        <Typography className="size25">${value}</Typography>
+        <Typography className="size25">MX$ {value}</Typography>
         <Typography className="size16">{footer}</Typography>
       </Box>
     </Box>

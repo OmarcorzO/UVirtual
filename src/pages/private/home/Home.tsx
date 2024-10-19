@@ -53,6 +53,7 @@ const Home = () => {
           <Button
             disableTouchRipple
             className="btnInfo btnGradientOrangeCircle size16"
+            href="sign-up"
           >
             Inscribete Ahora <IconArrowUpRight />
           </Button>
@@ -103,24 +104,24 @@ const Home = () => {
             {/************************/}
             {/* AREA DE CONOCIMIENTO */}
             {/************************/}
-            <FormControl className="selectWhite">
-              <InputLabel id="demo-simple-select-label" className="size18">
-                Área de conocimiento
-              </InputLabel>
+            {/* <FormControl className="selectWhite">
+                <InputLabel id="demo-simple-select-label" className="size18">
+                  Área de conocimiento
+                </InputLabel>
 
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                onChange={handleChange}
-              >
-                {selectTipo.map((item, index) => (
-                  <MenuItem key={index} value={item.value} className="size18">
-                    {item.title}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={age}
+                  onChange={handleChange}
+                >
+                  {selectTipo.map((item, index) => (
+                    <MenuItem key={index} value={item.value} className="size18">
+                      {item.title}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl> */}
 
             <Button
               disableTouchRipple
@@ -158,10 +159,7 @@ const Home = () => {
           {/* DESCRIPTION */}
           {/***************/}
           <Typography className="description size18">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Una carrera profesional es el comienzo de un viaje donde el aprendizaje continuo y la pasión por crecer se convierten en las claves del éxito y la realización personal.
           </Typography>
 
           {/**********/}
@@ -204,10 +202,7 @@ const Home = () => {
           {/* DESCRIPTION */}
           {/***************/}
           <Typography className="description size18">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            El Doctorado es la culminación de un esfuerzo incanzable por expandir los límites del conocimiento, donde la pasión por aprender se transforma en contribución a la sociedad.
           </Typography>
 
           {/**********/}
@@ -250,10 +245,7 @@ const Home = () => {
           {/* DESCRIPTION */}
           {/***************/}
           <Typography className="description size18">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            La Maestría es el cambio hacia la especialización, donde el conocimiento se profundiza y las habilidades se perfeccionan para enfrentar los desafíos con mayor confianza y experticia
           </Typography>
 
           {/**********/}

@@ -82,7 +82,7 @@ const DrawerContent = () => {
           <Tab label="Sobre UVirtual" {...a11yProps(1)} disableTouchRipple />
           <Tab label="Business" {...a11yProps(2)} disableTouchRipple />
           <Tab label="Claustro docente" {...a11yProps(3)} disableTouchRipple />
-          <Tab label="Servicios" {...a11yProps(4)} disableTouchRipple />
+          <Tab label="Investigación" {...a11yProps(4)} disableTouchRipple />
           <Tab label="Contáctanos" {...a11yProps(5)} disableTouchRipple />
 
           <Box className="btnsNoTab">
@@ -92,6 +92,7 @@ const DrawerContent = () => {
             <Button
               disableTouchRipple
               className="btnGradientOrangeSquare size18"
+              href="login"
             >
               Aula Virtual
             </Button>

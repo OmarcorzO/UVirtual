@@ -45,8 +45,8 @@ const Mastery = () => {
       {/**********/}
       <Banner
         urlImage={ImgBanner}
-        title="Filosofía Política"
-        description="Investiga y explora cuestiones filosóficas relacionadas con la política, la teoría política y la filosofía social."
+        title="Maestrías"
+        description="La maestría es el puente entre el conocimiento adquirido y la especialización profunda, un paso firme hacia la excelencia profesional y académica."
       />
 
       {/********/}

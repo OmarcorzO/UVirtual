@@ -24,6 +24,13 @@
   }
 }
 
+.title.size40 {
+  color: var(--colorBlueDark);
+  text-align: center;
+  line-height: 110%;
+  /* 66px */
+}
+
 // WIDTH 600PX
 @media (max-width: 600px) {
   .containerFilter {

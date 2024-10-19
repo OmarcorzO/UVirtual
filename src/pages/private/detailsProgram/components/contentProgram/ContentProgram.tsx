@@ -1,4 +1,7 @@
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Box,
   Button,
   FormControl,
@@ -19,7 +22,7 @@ import {
   pensumMastery,
   selectArea,
 } from "../../../../../components/dataApi/DataApi";
-import { useState } from "react";
+import React, { useState } from "react";
 import IconArrowUpRight from "../../../../../assets/icons/IconArrowUpRight";
 
 interface ContentProgramProps {
@@ -39,6 +42,12 @@ const validatePensum = (code: string) => {
 
 const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
   const [age, setAge] = useState("");
+  const [expanded, setExpanded] = React.useState<string | false>("panel1");
+
+  const handleChange =
+    (panel: string) => (_event: React.SyntheticEvent, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
 
   // SELECT
   const handleSelect = (event: SelectChangeEvent) => {
@@ -83,6 +92,25 @@ const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
               Descargar programa completo
             </Typography>
           </Button>
+        </Box>
+
+        {/******************************/}
+        {/* CARTA EGRESADOS PROGRAMA */}
+        {/******************************/}
+        <Box className="cardDescriptionProgram">
+          {/**********/}
+          {/* TITULO */}
+          {/**********/}
+          <Typography className="title size32">
+            Fin del Aprendizaje y Perfil de egreso
+          </Typography>
+
+          {/***************/}
+          {/* DESCRIPTION */}
+          {/***************/}
+          <Typography className="description size20">
+            {validatePensum(codeData)![posData].egressInfo}
+          </Typography>
         </Box>
 
         {/******************/}
@@ -191,73 +219,25 @@ const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
           {/*********/}
           <Typography className="title size32">Plan de estudios</Typography>
 
-          <Box className="formPlanStudy">
-            {/***********************/}
-            {/* RESUMEN DE CRÉDITOS */}
-            {/***********************/}
-            <FormControl className="selectBorder">
-              <InputLabel id="demo-simple-select-label" className="size16">
-                Resumen de créditos
-              </InputLabel>
-
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                onChange={handleSelect}
-              >
-                {selectArea.map((item, index) => (
-                  <MenuItem key={index} value={item.value} className="size16">
-                    {item.title}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            {/**************/}
-            {/* PRIMER AÑO */}
-            {/**************/}
-            <FormControl className="selectBorder">
-              <InputLabel id="demo-simple-select-label" className="size16">
-                Primer año
-              </InputLabel>
-
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                onChange={handleSelect}
-              >
-                {selectArea.map((item, index) => (
-                  <MenuItem key={index} value={item.value} className="size16">
-                    {item.title}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-
-            {/***************/}
-            {/* SEGUNDO AÑO */}
-            {/***************/}
-            <FormControl className="selectBorder">
-              <InputLabel id="demo-simple-select-label" className="size16">
-                Segundo año
-              </InputLabel>
-
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={age}
-                onChange={handleSelect}
-              >
-                {selectArea.map((item, index) => (
-                  <MenuItem key={index} value={item.value} className="size16">
-                    {item.title}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Box>
+          <Accordion
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
+        >
+          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+            <Typography className="size25">Lorem ipsum</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography className="size20">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
 
           {/*******************/}
           {/* BOTON DESCARGAR */}
@@ -270,7 +250,7 @@ const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
             />
 
             <Typography>
-              Doctorado en Pedagogía y Educación
+              {validatePensum(codeData)![posData].title}
               <br />
               <strong>Descargar plan de estudios.</strong>
             </Typography>
@@ -421,7 +401,7 @@ const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
           {/***************/}
           {/* BOTON AHORA */}
           {/***************/}
-          <Button disableTouchRipple className="btnGradientOrangeCircle">
+          <Button disableTouchRipple className="btnGradientOrangeCircle" href="courses">
             <Typography className="size16">COMIENZA AHORA</Typography>
 
             <IconArrowUpRight />

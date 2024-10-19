@@ -7,8 +7,12 @@ import ImgBanner from "../../../assets/images/bannerDetailsCourse.png";
 import SectionsCourse from "./componentCourse/SectionsCourse";
 import FrecuentlyQuestion from "./componentCourse/FrecuentlyQuestion/FrecuentlyQuestion";
 import SliderCommit from "../../../components/sliderCommit/SliderCommit";
+import { pensumCourses } from "../../../components/dataApi/DataApi";
 
 const DetailsCourse = () => {
+  const code = window.location.search.split(/[?]|[&]/)[1];
+  const pos = parseInt(window.location.search.split(/[?]|[&]/)[2]);
+
   return (
     <Box>
       {/**********/}
@@ -16,8 +20,8 @@ const DetailsCourse = () => {
       {/**********/}
       <Banner
         urlImage={ImgBanner}
-        title="Diseño UX/UI"
-        description="Aprende a hacer un research, e investigar acerca de un problema que convertirás o en una idea de app o web."
+        title={pensumCourses[pos].title}
+        description={pensumCourses[pos].description}
       />
 
       {/********/}
@@ -27,7 +31,7 @@ const DetailsCourse = () => {
         {/*********************/}
         {/* SECTION DEL CURSO */}
         {/*********************/}
-        <SectionsCourse />
+        <SectionsCourse posData={pos} />
 
         {/*******************/}
         {/* SLIDER COMPLETO */}

@@ -61,8 +61,7 @@ const TeachingStaff = () => {
             <Divider orientation="horizontal" />
 
             <Typography className="size25">
-              Más de 350 profesores y profesionales en activo procedentes de más
-              de 25 países diferentes
+              Profesores internacionales de impacto global
             </Typography>
           </Box>
 
@@ -76,8 +75,7 @@ const TeachingStaff = () => {
             <Divider orientation="horizontal" />
 
             <Typography className="size25">
-              Experiencia de los Directores de Programa y tutela personalizada
-              de nuestros profesores
+              Profesionales de alta experiencia y compromiso social
             </Typography>
           </Box>
 

@@ -193,6 +193,7 @@ const Header = () => {
         <Button
           disableTouchRipple
           className="btnInfo btnGradientOrangeCircle "
+          href="contact-us"
           sx={{ textTransform: "uppercase" }}
         >
           <Typography className="size16">Solicitar Información</Typography>

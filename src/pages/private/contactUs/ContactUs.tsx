@@ -33,7 +33,7 @@ const ContactUs = () => {
       <Banner
         urlImage={ImgBanner}
         title="Contáctanos"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description=""
       />
 
       {/********/}
@@ -146,12 +146,11 @@ const ContactUs = () => {
           <Typography>
             Si los Usuarios desean contactar con UVirtual para cualquier duda o
             incidencia, pueden utilizar la siguiente dirección de correo
-            electrónico informacion@uvirtual.com o contactar a través del número
-            de teléfono (+00) 000 000 0000. Este servicio estará disponible de{" "}
+            electrónico rectoria@uvirtualad.mx o contactar a través del número
+            de teléfono (+52) 55 7563 8192. Este servicio estará disponible de{" "}
             <br />
             <strong>
-              lunes a jueves de 9.30h a 22h, los viernes de 9.30h a 21h y los
-              sábados de 10h a 14h.
+              Lunes a sábados de 9:00h a 18:00h
             </strong>
           </Typography>
 

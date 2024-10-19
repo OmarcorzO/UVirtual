@@ -48,15 +48,15 @@ const Footer = () => {
           <Button disableTouchRipple onClick={() =>  window.location.href = '/about-us'}>
             Sobre Nosotros
           </Button>
-          <Button disableTouchRipple onClick={() =>  window.location.href = '/home'}>
+          {/* <Button disableTouchRipple onClick={() =>  window.location.href = '/home'}>
             Realizar test
-          </Button>
+          </Button> */}
           <Button disableTouchRipple onClick={() => navigate("/login")}>
             Acceso al campus
           </Button>
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Business
-          </Button>
+          </Button> */}
         </Grid>
 
         {/************/}
@@ -69,18 +69,18 @@ const Footer = () => {
 
           <Button
             disableTouchRipple
-            onClick={() =>  window.location.href = '/undergraduate'}
+            onClick={() =>  window.location.href = '/courses'}
           >
             Microcertificaciones
           </Button>
+          <Button disableTouchRipple onClick={() =>  window.location.href = '/undergraduate'}>
+            Licenciaturas
+          </Button>
           <Button
             disableTouchRipple
-            onClick={() =>  window.location.href = '/undergraduate'}
+            onClick={() =>  window.location.href = '/mastery'}
           >
-            Cursos
-          </Button>
-          <Button disableTouchRipple onClick={() =>  window.location.href = '/doctorate'}>
-            Carreras
+            Maestrías
           </Button>
           <Button disableTouchRipple onClick={() =>  window.location.href = '/doctorate'}>
             Doctorados
@@ -95,18 +95,18 @@ const Footer = () => {
             Comunidad
           </Typography>
 
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Estudiantes
-          </Button>
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          </Button> */}
+          {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Egresados
-          </Button>
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          </Button> */}
+          <Button disableTouchRipple onClick={() => navigate("/teaching-staff")}>
             Docentes
           </Button>
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Blog
-          </Button>
+          </Button> */}
         </Grid>
 
         {/*********/}
@@ -117,15 +117,15 @@ const Footer = () => {
             Ayuda
           </Typography>
 
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Centro de ayuda
-          </Button>
+          </Button> */}
           <Button disableTouchRipple onClick={() => navigate("/home")}>
             Políticas de privacidad
           </Button>
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Políticas de cookies
-          </Button>
+          </Button> */}
           <Button disableTouchRipple onClick={() => navigate("/home")}>
             Términos y Condiciones
           </Button>
@@ -134,20 +134,16 @@ const Footer = () => {
         {/**************/}
         {/* SUSCRIBETE */}
         {/**************/}
-        <Grid item xs={12} md={12} lg={3.8}>
+        {/* <Grid item xs={12} md={12} lg={3.8}>
           <Typography component={"h3"} className="size25">
             Suscribete
           </Typography>
 
           <Box className="suscrib">
-            {/*********/}
-            {/* INPUT */}
-            {/*********/}
+           
             <OutlinedInput placeholder="Usuario o correo electrónico" />
 
-            {/*********************/}
-            {/* BOTON SUSCRIBIRSE */}
-            {/*********************/}
+           
             <Button disableTouchRipple onClick={() => navigate("/home")}>
               Suscribirme <IconNotification />
             </Button>
@@ -156,7 +152,7 @@ const Footer = () => {
           <Typography>
             Al hacerlo, aceptas nuestros términos de privacidad y uso de datos.
           </Typography>
-        </Grid>
+        </Grid> */}
       </Grid>
 
       {/*********/}

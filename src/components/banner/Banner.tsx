@@ -34,7 +34,7 @@ const Banner = ({
           {title}
         </Typography>
 
-        <Typography component={"h2"} className="size25">
+        <Typography component={"h2"} className="size25" style={{ textAlign: "justify"}}>
           {description}
         </Typography>
 

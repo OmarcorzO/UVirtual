@@ -73,6 +73,7 @@ const Microcertifications = () => {
       <Button
         disableTouchRipple
         className="btnInfo btnGradientOrangeCircle size16"
+        href="courses"
       >
         EXPLORAR nuestras microcertificaciones <IconArrowUpRight />
       </Button>

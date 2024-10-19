@@ -45,8 +45,8 @@ const Programs = () => {
       {/**********/}
       <Banner
         urlImage={ImgBanner}
-        title="Filosofía Política"
-        description="Investiga y explora cuestiones filosóficas relacionadas con la política, la teoría política y la filosofía social."
+        title="Licenciaturas"
+        description="Transforma la educación a partir de tecnologías disruptivas."
       />
 
       {/********/}

@@ -45,8 +45,8 @@ const Doctorate = () => {
       {/**********/}
       <Banner
         urlImage={ImgBanner}
-        title="Filosofía Política"
-        description="Investiga y explora cuestiones filosóficas relacionadas con la política, la teoría política y la filosofía social."
+        title="Doctorados"
+        description="El Doctorado no solo es un título académico, sino una travesía de investigación, dedicación y descubrimiento que redefine el conocimiento en un campo específico."
       />
 
       {/********/}

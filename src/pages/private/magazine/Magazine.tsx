@@ -35,21 +35,17 @@ const Magazine = () => {
       {/**********/}
       <Banner
         urlImage={ImgBanner}
-        title="Revista UVirtual"
-        description="La Vicerrectoría de Investigaciones informa a todos los investigadores de la UNIVERSIDAD UVIRTUAL que la plataforma Open Journal Systems (OJS), se encuentra disponible para los investigadores que dirijan publicaciones de revistas y documentos periódicos institucionales o que están interesados en impulsar este tipo de publicaciones"
+        title="Revista Sapiendus"
+        description="La Dirección de Investigación informa a todos los investigadores de la UNIVERSIDAD UVIRTUAL que la plataforma Open Journal Systems (OJS), se encuentra disponible para los investigadores que dirijan publicaciones de revistas y documentos periódicos institucionales o que están interesados en impulsar este tipo de publicaciones"
       />
 
       {/********/}
       {/* MAIN */}
       {/********/}
       <Box className="mainContent">
-        {/************************/}
-        {/* CONTENEDOR DE FILTRO */}
-        {/************************/}
-        <Box className="containerFilter">
-          {/*******************/}
-          {/* TIPO DE ESTUDIO */}
-          {/*******************/}
+       
+        {/* <Box className="containerFilter">
+         
           <FormControl className="selectWhite">
             <InputLabel id="demo-simple-select-label" className="size18">
               Seleccione una categoría
@@ -69,9 +65,7 @@ const Magazine = () => {
             </Select>
           </FormControl>
 
-          {/**********/}
-          {/* BUSCAR */}
-          {/**********/}
+         
           <OutlinedInput
             className="inputWhite inputSearch"
             placeholder="Buscar"
@@ -88,8 +82,11 @@ const Magazine = () => {
           >
             <Typography className="size20">Buscar</Typography>
           </Button>
-        </Box>
+        </Box> */}
 
+<Typography className="title size40">
+            ¡Ingresa aquí!
+          </Typography>
         <Box className="containerCardsMagazine">
           {imgMagazines.map((item, index) => (
             <CardImg key={index} img={item.img} url={item.url}/>

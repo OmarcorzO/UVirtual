@@ -11,8 +11,13 @@ import IconCertificate from "../../../../assets/icons/IconCertificate";
 import IconOnline2 from "../../../../assets/icons/IconOnline2";
 import IconInfinite from "../../../../assets/icons/IconInfinite";
 import { useNavigate } from "react-router-dom";
+import { pensumCourses } from "../../../../components/dataApi/DataApi";
 
-const SectionsCourse = () => {
+interface SectionsCourseProps {
+  posData: number;
+}
+
+const SectionsCourse = ({ posData }: SectionsCourseProps) => {
   const nav = useNavigate()
 
   return (
@@ -36,25 +41,19 @@ const SectionsCourse = () => {
           {/* DESCRIPTION */}
           {/***************/}
           <Typography className="description size20">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            {pensumCourses[posData]!.longDescription}
           </Typography>
 
           {/****************************/}
           {/* BOTON DESCARGAR PROGRAMA */}
           {/****************************/}
-          <Button disableTouchRipple className="btnGradientOrangeCircle">
+          {/* <Button disableTouchRipple className="btnGradientOrangeCircle">
             <IconDownload />
 
             <Typography className="size16">
               Descargar programa completo
             </Typography>
-          </Button>
+          </Button> */}
         </Box>
 
         {/******************/}
@@ -70,77 +69,56 @@ const SectionsCourse = () => {
           {/* AREAS */}
           {/*********/}
           <Box className="containerStackWork">
-            {/***************************/}
-            {/* INVESTIGACION EDUCATIVA */}
-            {/***************************/}
             <Box
               width="100%"
               display="flex"
               flexDirection={{ xs: "column", lg: "row" }}
               gap={{ xs: "20px", lg: "0px" }}
             >
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="description size18">
-                  Crear un portafolio profesional de UX, incluyendo proyectos de
-                  principio a fin, para que esté listo para solicitar puestos de
-                  trabajo
-                </Typography>
-              </Box>
-
-              {/****************************/}
-              {/* INSTITUCIONES EDUCATIVAS */}
-              {/****************************/}
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="description size18">
-                  Aplicar conceptos fundamentales de UX, como el diseño centrado
-                  en el usuario, la accesibilidad y el diseño centrado en la
-                  equidad
-                </Typography>
-              </Box>
+              {pensumCourses[posData]!.itemsLearn.map((item, index) => (
+                <>
+                  {index < 2 &&
+                    <Box
+                      className="contentStackWork"
+                      padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
+                    >
+                      <Typography className="description size18">
+                        <b>
+                          {item.title}
+                        </b>
+                        {" "}{item.description}
+                      </Typography>
+                    </Box>
+                  }
+                </>
+              ))}
             </Box>
-
             <Box
               width="100%"
               display="flex"
               flexDirection={{ xs: "column", lg: "row" }}
               gap={{ xs: "20px", lg: "0px" }}
             >
-              {/*****************************************/}
-              {/* COORDINADOR DE DEPARTAMENTO ACADEMICO */}
-              {/*****************************************/}
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="description size18">
-                  Comprender los fundamentos de la investigación UX, como la
-                  planificación de estudios de investigación, la realización de
-                  entrevistas y estudios de usabilidad, y la síntesis de los
-                  resultados de la investigación
-                </Typography>
-              </Box>
-
-              {/***********************/}
-              {/* PROCESOS EDUCATIVOS */}
-              {/***********************/}
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="description size18">
-                  Siga el proceso de diseño: empatice con los usuarios, defina
-                  los puntos de dolor, idee soluciones, cree wireframes y
-                  prototipos, pruebe e itere sobre los diseños
-                </Typography>
-              </Box>
+              {pensumCourses[posData]!.itemsLearn.map((item, index) => (
+                <>
+                  {index > 1 &&
+                    <Box
+                      className="contentStackWork"
+                      padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
+                    >
+                      <Typography className="description size18">
+                        <b>
+                          {item.title}
+                        </b>
+                        {" "}{item.description}
+                      </Typography>
+                    </Box>
+                  }
+                </>
+              ))}
             </Box>
           </Box>
+
         </Box>
 
         {/**************/}
@@ -156,36 +134,34 @@ const SectionsCourse = () => {
           {/* DESCRIPTION */}
           {/***************/}
           <Typography className="description size20">
-            Para este curso no es necesario tener conocimientos previos. Para
-            mejorar tu experiencia de cursada, te aconsejamos contar con:
-            <br />
-            • PC de 2 a 4 GB de RAM.
-            <br />
-            • La extensión de Google Chrome Google Draw.io
-            <br />• Figma, Adobe XD o Sketch
+            {pensumCourses[posData]!.itemsReq.map((item) => (
+              <>
+                • <b>{item.title}</b>{" "}{item.description} <br />
+              </>
+            ))}
           </Typography>
 
           {/*********/}
           {/* TITLE */}
           {/*********/}
-          <Typography className="title size32">
+          {/* <Typography className="title size32">
             ¿Quiénes nos certifican?
-          </Typography>
+          </Typography> */}
 
           {/***************/}
           {/* DESCRIPTION */}
           {/***************/}
-          <Typography className="description size20">
+          {/* <Typography className="description size20">
             Nuestros cursos están certificados por empresas líderes de cada
             industria como...
             <br /> <br />
             Conoce más sobre las empresas que nos certifican
-          </Typography>
+          </Typography> */}
 
           {/*******************/}
           {/* BOTON DESCARGAR */}
           {/*******************/}
-          <Button disableTouchRipple className="btnDownload">
+          {/* <Button disableTouchRipple className="btnDownload">
             <IconDownload
               color="var(--colorBlueLight)"
               width="28px"
@@ -197,7 +173,7 @@ const SectionsCourse = () => {
               <br />
               <strong>Descargar programa</strong>
             </Typography>
-          </Button>
+          </Button> */}
         </Box>
       </Box>
 
@@ -284,36 +260,6 @@ const SectionsCourse = () => {
               <IconFavorite />
             </IconButton>
           </Box>
-        </Box>
-
-        {/******************/}
-        {/* CARTA APRENDER */}
-        {/******************/}
-        <Box className="learnCard">
-          {/**********/}
-          {/* TITULO */}
-          {/**********/}
-          <Typography className="title size32">
-            Aprender nunca había sido tan fácil.
-          </Typography>
-
-          {/***************/}
-          {/* DESCRIPCION */}
-          {/***************/}
-          <Typography className="description size20">
-            Comienza, transforma e impulsa tu carrera profesional con más de
-            5400 cursos, títulos de pregrado y posgrado en cualquier lugar del
-            mundo.
-          </Typography>
-
-          {/***************/}
-          {/* BOTON AHORA */}
-          {/***************/}
-          <Button disableTouchRipple className="btnGradientOrangeCircle">
-            <Typography className="size16">COMIENZA AHORA</Typography>
-
-            <IconArrowUpRight />
-          </Button>
         </Box>
       </Box>
     </Box>
