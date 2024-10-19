@@ -5,11 +5,13 @@ import img1 from "../../assets/images/magazineThinkAndManage.png";
 
 interface CardImgProps {
   img?: string;
+  url?: string;
 }
 
-const CardImg = ({ img = img1 }: CardImgProps) => {
+const CardImg = ({ img = img1, url }: CardImgProps) => {
   return (
     <Box
+      onClick={() => window.open(url, '_blank')}
       className="cardImg"
       sx={{
         // background: `url(${img}) lightgray 50% / cover no-repeat`,
@@ -21,6 +23,7 @@ const CardImg = ({ img = img1 }: CardImgProps) => {
           height: "100%",
           borderRadius: "20px",
         },
+        cursor: 'pointer'
       }}
     >
       <Box

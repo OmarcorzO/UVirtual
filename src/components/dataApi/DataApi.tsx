@@ -1,16 +1,5 @@
 // REVISTA
-import imgMagazine1 from "../../assets/images/magazineThinkAndManage.png";
-import imgMagazine2 from "../../assets/images/magazineLaw.png";
-import imgMagazine3 from "../../assets/images/magazineEconomy.png";
-import imgMagazine4 from "../../assets/images/magazineEngineer.png";
-import imgMagazine5 from "../../assets/images/magazineMemories.png";
-import imgMagazine6 from "../../assets/images/magazinePsychology.png";
-import imgMagazine7 from "../../assets/images/magazineZone.png";
-import imgMagazine8 from "../../assets/images/magazineArt.png";
-import imgMagazine9 from "../../assets/images/magazineContrast.png";
-import imgMagazine10 from "../../assets/images/magazineWritePsichology.png";
-import imgMagazine11 from "../../assets/images/magazineEconomy.png";
-import imgMagazine12 from "../../assets/images/magazineNietzsche.png";
+import imgMagazine1 from "../../assets/images/magazineSapiens.png";
 
 // PENSUM CURSOS Y MICROCURSO
 import imgPensumCourse1 from "../../assets/images/imgPensumCourse.jpg";
@@ -126,51 +115,8 @@ export const imgMagazines = [
   {
     img: imgMagazine1,
     title: "magazineThinkAndManage",
-  },
-  {
-    img: imgMagazine2,
-    title: "magazineLaw",
-  },
-  {
-    img: imgMagazine3,
-    title: "magazineEconomy",
-  },
-  {
-    img: imgMagazine4,
-    title: "magazineEngineer",
-  },
-  {
-    img: imgMagazine5,
-    title: "magazineMemories",
-  },
-  {
-    img: imgMagazine6,
-    title: "magazinePsychology",
-  },
-  {
-    img: imgMagazine7,
-    title: "magazineZone",
-  },
-  {
-    img: imgMagazine8,
-    title: "magazineArt",
-  },
-  {
-    img: imgMagazine9,
-    title: "magazineContrast",
-  },
-  {
-    img: imgMagazine10,
-    title: "magazineWritePsichology",
-  },
-  {
-    img: imgMagazine11,
-    title: "magazineEconomy",
-  },
-  {
-    img: imgMagazine12,
-    title: "magazineNietzsche",
-  },
+    url: "https://publicaciones-universidadvirtualabiertayadistancia.com/index.php/sapiendus/index"
+  }
 ];
 
 // PENSUM DE CURSOS Y MICROCURSOS

@@ -92,14 +92,14 @@ const Magazine = () => {
 
         <Box className="containerCardsMagazine">
           {imgMagazines.map((item, index) => (
-            <CardImg key={index} img={item.img} />
+            <CardImg key={index} img={item.img} url={item.url}/>
           ))}
         </Box>
 
         {/**************/}
         {/* PAGINACION */}
         {/**************/}
-        <PaginationComponent />
+        {/* <PaginationComponent /> */}
       </Box>
     </Box>
   );
