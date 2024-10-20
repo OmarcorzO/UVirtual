@@ -6,8 +6,7 @@ import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import {
   BtnFloatChatbot,
-  BtnFloatArrow,
-  BtnShare,
+  BtnShare
 } from "../components/btnFloat/BtnFloat";
 
 const Layout = () => {
@@ -27,7 +26,6 @@ const Layout = () => {
       {/* BOTON FLOTANTE */}
       {/******************/}
       <BtnFloatChatbot />
-      <BtnFloatArrow />
       <BtnShare />
 
       {/**********/}

@@ -43,14 +43,18 @@ const CardPensum = ({
   value,
   footer,
   index
-}: CardPensumProps) => {
-  console.log(index)
+}: CardPensumProps) => {  
   return (
     <Box className="contentCardPensum">
       {/**********/}
       {/* IMAGEN */}
       {/**********/}
-      <Box className="img" sx={{ background: `url(${img})` }} />
+      <Box className="img" sx={{ background: `url(${img})` }}>
+        <Box>
+          <Typography className="title size25">{title}</Typography>
+        </Box>
+      </Box>
+      {/* <Box className="img" sx={{ background: `url(${img})` }} /> */}
 
       {/***************/}
       {/* INFORMACION */}

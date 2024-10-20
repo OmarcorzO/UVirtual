@@ -17,6 +17,7 @@ import {
 // IMPORTADOS
 import "../undergraduate/undergraduate.scss";
 import {
+  carruselApi,
   pensumPrograms,
   selectArea,
 } from "../../../components/dataApi/DataApi";
@@ -26,6 +27,7 @@ import CustomerService from "../../../components/customerService/CustomerService
 import IconSearch from "../../../assets/icons/IconSearch";
 import CardPensum from "../../../components/cardPensum/CardPensum";
 import PaginationComponent from "../../../components/pagination/Pagination";
+import Carrusel from "../../../components/carrusel/Carrusel";
 
 const Programs = () => {
   const [age, setAge] = useState("");
@@ -43,11 +45,15 @@ const Programs = () => {
       {/**********/}
       {/* BANNER */}
       {/**********/}
-      <Banner
+      {/* <Banner
         urlImage={ImgBanner}
         title="Licenciaturas"
         description="Transforma la educación a partir de tecnologías disruptivas."
-      />
+      /> */}
+
+      <Box sx={{ padding: "45px"}}>
+        <Carrusel images={carruselApi}/>
+      </Box>
 
       {/********/}
       {/* MAIN */}

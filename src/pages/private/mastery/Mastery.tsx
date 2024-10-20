@@ -17,6 +17,7 @@ import {
 // IMPORTADOS
 import "../undergraduate/undergraduate.scss";
 import {
+  carruselApi,
   pensumMastery,
   selectArea,
 } from "../../../components/dataApi/DataApi";
@@ -26,6 +27,7 @@ import CustomerService from "../../../components/customerService/CustomerService
 import IconSearch from "../../../assets/icons/IconSearch";
 import CardPensum from "../../../components/cardPensum/CardPensum";
 import PaginationComponent from "../../../components/pagination/Pagination";
+import Carrusel from "../../../components/carrusel/Carrusel";
 
 const Mastery = () => {
   const [age, setAge] = useState("");
@@ -43,11 +45,15 @@ const Mastery = () => {
       {/**********/}
       {/* BANNER */}
       {/**********/}
-      <Banner
+      {/* <Banner
         urlImage={ImgBanner}
         title="Maestrías"
         description="La maestría es el puente entre el conocimiento adquirido y la especialización profunda, un paso firme hacia la excelencia profesional y académica."
-      />
+      /> */}
+
+      <Box sx={{ padding: "45px"}}>
+        <Carrusel images={carruselApi}/>
+      </Box>
 
       {/********/}
       {/* MAIN */}

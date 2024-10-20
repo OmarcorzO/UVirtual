@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -23,7 +23,6 @@ import { useLocation } from "react-router-dom";
 import "./btnFloat.scss";
 import { selectArea } from "../dataApi/DataApi";
 import IconChatbot from "../../assets/icons/IconChatbot";
-import IconArrowDown from "../../assets/icons/IconArrowDown";
 import IconMinus from "../../assets/icons/IconMinus";
 import Iconx from "../../assets/icons/IconX";
 import IconShare from "../../assets/icons/IconShare";
@@ -61,7 +60,7 @@ export const BtnFloatChatbot = () => {
   };
 
   // MOSTRAR SOLO EN LANDING
-  if (pathname !== "/landing") return null;
+  if (pathname === "/magazine") return null;
 
   return (
     <>
@@ -270,7 +269,7 @@ export const BtnFloatChatbot = () => {
                     </Button>
                   </>
                 ) : (
-                  <>
+                  <Box position={"relative"} height={"630px"}>
                     {/* CHATEAR CON CHATBOX */}
                     <Box display={"grid"} gap={"20px"}>
                       <Box className="chatAnswer">
@@ -310,96 +309,33 @@ export const BtnFloatChatbot = () => {
                         </Box>
                       </Box>
                     </Box>
-                  </>
+
+                    {/**********/}
+                    {/* FOOTER */}
+                    {/**********/}
+                    <Box className="chatbotFooter">
+                      <Box className="inputChat">
+                        <OutlinedInput
+                          className="inputBorder"
+                          placeholder="Escribe tu mensaje aquí..."
+                        />
+                      </Box>
+
+                      <IconButton className="iconClip">
+                        <IconClip />
+                      </IconButton>
+
+                      <IconButton className="iconSend btnGradientOrangeSquare">
+                        <IconSend />
+                      </IconButton>
+                    </Box>
+                  </Box>
                 )}
-              </Box>
-
-              {/**********/}
-              {/* FOOTER */}
-              {/**********/}
-              <Box className="chatbotFooter">
-                <Box className="inputChat">
-                  <OutlinedInput
-                    className="inputBorder"
-                    placeholder="Escribe tu mensaje aquí..."
-                  />
-                </Box>
-
-                <IconButton className="iconClip">
-                  <IconClip />
-                </IconButton>
-
-                <IconButton className="iconSend btnGradientOrangeSquare">
-                  <IconSend />
-                </IconButton>
               </Box>
             </Box>
           </Fade>
         )}
       </Popper>
-    </>
-  );
-};
-
-// BOTON FLECHAS
-export const BtnFloatArrow = () => {
-  const { pathname } = useLocation();
-
-  const [showScrollUp, setShowScrollUp] = useState(false);
-  const [showScrollDown, setShowScrollDown] = useState(false);
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.body.scrollHeight;
-
-    setShowScrollUp(scrollPosition > 100); // Muestra "Ir Arriba" si el scroll es mayor a 100px
-    setShowScrollDown(scrollPosition < documentHeight - windowHeight - 100); // Muestra "Ir Abajo" si no está cerca del final
-  };
-
-  // USE EFFECT
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const scrollToBottom = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  };
-
-  // MOSTRAR EN TODOS MENOS EN ÉSTAS VISTAS
-  if (pathname === "/landing") return null;
-  if (pathname === "/magazine") return null;
-
-  return (
-    <>
-      {/*********************/}
-      {/* BOTON HACIA ABAJO */}
-      {/*********************/}
-      {showScrollUp && (
-        <Fab
-          onClick={scrollToTop}
-          disableTouchRipple
-          className="btnFloat btnFloatInverter"
-        >
-          <IconArrowDown />
-        </Fab>
-      )}
-
-      {/**********************/}
-      {/* BOTON HACIA ARRIBA */}
-      {/**********************/}
-      {showScrollDown && (
-        <Fab onClick={scrollToBottom} disableTouchRipple className="btnFloat">
-          <IconArrowDown />
-        </Fab>
-      )}
     </>
   );
 };

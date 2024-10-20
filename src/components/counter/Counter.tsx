@@ -3,6 +3,7 @@ import { Divider, Paper, Stack, styled, Typography } from "@mui/material";
 // IMPORTADOS
 import "./counter.scss";
 import { counterApi } from "../dataApi/DataApi";
+import AnimatedContainer from "../animatedContainer/AnimatedContainer";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "transparent",
@@ -24,20 +25,22 @@ const Counter = () => {
     >
       {counterApi.map((item, index) => (
         <Item>
-          <Typography
-            component={"h1"}
-            className="size70"
-            sx={{
-              color:
-                index % 2
-                  ? "var(--colorBlueDark) !important"
-                  : "var(--colorOrange)",
-            }}
-          >
-            {item.title}
-          </Typography>
+          <AnimatedContainer animationType="fadeInUp" time={1.5}>
+            <Typography
+              component={"h1"}
+              className="size70"
+              sx={{
+                color:
+                  index % 2
+                    ? "var(--colorBlueDark) !important"
+                    : "var(--colorOrange)",
+              }}
+            >
+              {item.title}
+            </Typography>
 
-          <Typography className="size25">{item.description}</Typography>
+            <Typography className="size25">{item.description}</Typography>
+          </AnimatedContainer>
         </Item>
       ))}
     </Stack>

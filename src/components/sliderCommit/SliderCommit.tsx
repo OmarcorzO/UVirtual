@@ -1,14 +1,14 @@
 import { SetStateAction, useState } from "react";
 import { Box, IconButton, Rating, Typography } from "@mui/material";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 // IMPORTADOS
 import "./sliderCommit.scss";
 import { imgSlyderComplete } from "../dataApi/DataApi";
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 const SliderCommit = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [value, setValue] = useState<number | null>(5);
+  // const [value, setValue] = useState<number | null>(5);
 
   // NAVEGAR ATRAS
   const handleNext = () => {
@@ -35,8 +35,7 @@ const SliderCommit = () => {
       {/********************/}
       <Box width="100%" height="100%">
         <Typography className="commit size32">
-          “Quede infinitamente agradecido con las nuevas herramientas y
-          habilidades y ya estoy poniendo en práctica”
+          {imgSlyderComplete[currentIndex].quote}
         </Typography>
 
         {/**********/}
@@ -45,7 +44,7 @@ const SliderCommit = () => {
         <Box
           className="profileCommit"
           component="img"
-          src={imgSlyderComplete[currentIndex]}
+          src={imgSlyderComplete[currentIndex].image}
           alt={`Image ${currentIndex + 1}`}
           width="100px"
           height="100px"
@@ -59,16 +58,15 @@ const SliderCommit = () => {
         {/*************/}
         <Rating
           name="simple-controlled"
-          value={value}
-          onChange={(_event, newValue) => {
-            setValue(newValue);
-          }}
+          value={imgSlyderComplete[currentIndex].rating}
           readOnly
         />
 
-        <Typography className="name size25">Diego Vélez</Typography>
+        <Typography className="name size25">
+          {imgSlyderComplete[currentIndex].name}
+        </Typography>
         <Typography className="profession size20">
-          Doctorado en Ciencias de la Computación
+          {imgSlyderComplete[currentIndex].profession}
         </Typography>
       </Box>
 

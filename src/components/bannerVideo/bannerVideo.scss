@@ -1,0 +1,13 @@
+.containerVideo {
+  position: relative;
+
+  .contentVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    max-height: 1920px;
+  }
+}

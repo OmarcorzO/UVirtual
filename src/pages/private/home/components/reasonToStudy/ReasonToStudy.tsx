@@ -7,6 +7,7 @@ import CardInfo from "../../../../../components/cardInfo/CardInfo";
 import img1 from "../../../../../assets/images/imgGrandpa.png";
 import IconGraduate from "../../../../../assets/icons/IconGraduate";
 import IconTeacher from "../../../../../assets/icons/IconTeacher";
+import AnimatedContainer from "../../../../../components/animatedContainer/AnimatedContainer";
 
 const ReasonToStudy = () => {
   return (
@@ -37,26 +38,31 @@ const ReasonToStudy = () => {
           {/*******************************/}
           {/* METODOLOGÍA ONLINE FLEXIBLE */}
           {/*******************************/}
-          <CardInfo
-            title="Metodología online flexible"
-            description="Con nuestra metodología en línea flexible, el aprendizaje se adapta a tu vida, no al revés. Aprovecha la libertad de estudiar cuando y donde quieras, para alcanzar tus objetivos educativos sin comprometer tu estilo de vida."
-            maxWidth="967px"
-          />
+          <AnimatedContainer animationType="fadeInLeft">
+            <CardInfo
+              title="Metodología online flexible"
+              description="Con nuestra metodología en línea flexible, el aprendizaje se adapta a tu vida, no al revés. Aprovecha la libertad de estudiar cuando y donde quieras, para alcanzar tus objetivos educativos sin comprometer tu estilo de vida."
+              maxWidth="967px"
+            />
+          </AnimatedContainer>
           {/***********************************/}
           {/* GRADÚATE CON TITULO PROFECIONAL */}
           {/***********************************/}
-          <CardInfo
-            icon={<IconGraduate />}
-            title="Gradúate con título profesional."
-            description="Gradúate con un título profesional que te abrirá puertas ilimitadas de oportunidades en el mundo profesional. En UVirtual, te ayudamos a forjar un camino brillante hacia el éxito y el logro de tus metas profesionales."
-            maxWidth="967px"
-            background={`var(--colorBlueLight)`}
-            colorTitle="#fff"
-            colorDescription="#fff"
-          />
+          <AnimatedContainer animationType="fadeInLeft" time={1.5}>
+            <CardInfo
+              icon={<IconGraduate />}
+              title="Gradúate con título profesional."
+              description="Gradúate con un título profesional que te abrirá puertas ilimitadas de oportunidades en el mundo profesional. En UVirtual, te ayudamos a forjar un camino brillante hacia el éxito y el logro de tus metas profesionales."
+              maxWidth="967px"
+              background={`var(--colorBlueLight)`}
+              colorTitle="#fff"
+              colorDescription="#fff"
+            />
+          </AnimatedContainer>
         </Box>
 
-        <Box>
+        <AnimatedContainer animationType="fadeInRight" time={2}>
+          {/* <Box> */}
           {/***********************************/}
           {/* DOCENTES CAPACITADOS Y EXPERTOS */}
           {/***********************************/}
@@ -70,7 +76,8 @@ const ReasonToStudy = () => {
             colorTitle="#fff"
             colorDescription="#fff"
           />
-        </Box>
+          {/* </Box> */}
+        </AnimatedContainer>
       </Stack>
     </Box>
   );

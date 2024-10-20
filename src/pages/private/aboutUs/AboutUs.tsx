@@ -16,6 +16,7 @@ import IconInclusion from "../../../assets/icons/IconInclusion";
 import IconUVirtualWhite from "../../../assets/icons/IconUVirtualWhite";
 import IconMisionVision from "../../../assets/icons/IconMisionVision";
 import CustomerService from "../../../components/customerService/CustomerService";
+import AnimatedContainer from "../../../components/animatedContainer/AnimatedContainer";
 
 const AboutUs = () => {
   return (
@@ -136,38 +137,44 @@ const AboutUs = () => {
             {/************************/}
             {/* EXCELENCIA ACADEMICA */}
             {/************************/}
-            <CardInfo
-              icon={<IconAcademicExcellence />}
-              title="Excelencia Académica"
-              description="Compromiso con la calidad en la enseñanza, evaluación y desarrollo de programas académicos que fomenten el máximo rendimiento y aprendizaje de los estudiantes."
-              maxWidth="967px"
-            />
+            <AnimatedContainer animationType="fadeInLeft">
+              <CardInfo
+                icon={<IconAcademicExcellence />}
+                title="Excelencia Académica"
+                description="Compromiso con la calidad en la enseñanza, evaluación y desarrollo de programas académicos que fomenten el máximo rendimiento y aprendizaje de los estudiantes."
+                maxWidth="967px"
+              />
+            </AnimatedContainer>
 
             {/*****************/}
             {/* ACCESIBILIDAD */}
             {/*****************/}
-            <CardInfo
-              icon={<IconAccessibility />}
-              title="Accesibilidad"
-              description="Garantizar que la educación superior sea accesible para todos y todas, sin importar la ubicación geográfica, situación económica o limitaciones físicas."
-              maxWidth="967px"
-              background="var(--colorOrange)"
-              colorTitle="#ffffff"
-              colorDescription="#ffffff"
-            />
+            <AnimatedContainer animationType="fadeInLeft">
+              <CardInfo
+                icon={<IconAccessibility />}
+                title="Accesibilidad"
+                description="Garantizar que la educación superior sea accesible para todos y todas, sin importar la ubicación geográfica, situación económica o limitaciones físicas."
+                maxWidth="967px"
+                background="var(--colorOrange)"
+                colorTitle="#ffffff"
+                colorDescription="#ffffff"
+              />
+            </AnimatedContainer>
 
             {/**************/}
             {/* INNOVACIÓN */}
             {/**************/}
-            <CardInfo
-              icon={<IconInnovation />}
-              title="Innovación"
-              description="Promover un ambiente donde la creatividad y la innovación educativa sean constantemente fomentadas, integrando tecnologías emergentes y métodos pedagógicos avanzados."
-              maxWidth="967px"
-              background={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url(${imgInnovacion}) lightgray 50% / cover no-repeat`}
-              colorTitle="#ffffff"
-              colorDescription="#ffffff"
-            />
+            <AnimatedContainer animationType="fadeInLeft">
+              <CardInfo
+                icon={<IconInnovation />}
+                title="Innovación"
+                description="Promover un ambiente donde la creatividad y la innovación educativa sean constantemente fomentadas, integrando tecnologías emergentes y métodos pedagógicos avanzados."
+                maxWidth="967px"
+                background={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url(${imgInnovacion}) lightgray 50% / cover no-repeat`}
+                colorTitle="#ffffff"
+                colorDescription="#ffffff"
+              />
+            </AnimatedContainer>
           </Stack>
 
           {/***********/}
@@ -183,40 +190,46 @@ const AboutUs = () => {
               {/**********************************/}
               {/* FLEXIBILIDAD Y PERSONALIZACIÓN */}
               {/**********************************/}
-              <CardInfo
-                icon={<IconComputer />}
-                title="Flexibilidad y Personalización."
-                description="Trabajamos para ofrecer un ambiente educativo ajustable a las necesidades de los estudiantes, promoviendo la autonomía y autodirección personalizada de su trayectoria académica."
-                maxWidth="524px"
-                display="flex"
-                background={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url(${imgFlexPerson}) lightgray 50% / cover no-repeat`}
-                colorTitle="#fff"
-                colorDescription="#fff"
-              />
+              <AnimatedContainer animationType="fadeInLeft">
+                <CardInfo
+                  icon={<IconComputer />}
+                  title="Flexibilidad y Personalización."
+                  description="Trabajamos para ofrecer un ambiente educativo ajustable a las necesidades de los estudiantes, promoviendo la autonomía y autodirección personalizada de su trayectoria académica."
+                  maxWidth="524px"
+                  display="flex"
+                  background={`linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%), url(${imgFlexPerson}) lightgray 50% / cover no-repeat`}
+                  colorTitle="#fff"
+                  colorDescription="#fff"
+                />
+              </AnimatedContainer>
             </Box>
 
             <Box display={"grid"} gap={{ xs: 1, sm: 2 }}>
               {/**************************/}
               {/* RESPONSABILIDAD SOCIAL */}
               {/**************************/}
-              <CardInfo
-                icon={<IconHand />}
-                title="Responsabilidad social"
-                description="Inspirar a los estudiantes para que se conviertan en ciudadanos responsables, éticos y comprometidos con el impacto positivo en la sociedad."
-                maxWidth="967px"
-              />
+              <AnimatedContainer animationType="fadeInLeft">
+                <CardInfo
+                  icon={<IconHand />}
+                  title="Responsabilidad social"
+                  description="Inspirar a los estudiantes para que se conviertan en ciudadanos responsables, éticos y comprometidos con el impacto positivo en la sociedad."
+                  maxWidth="967px"
+                />
+              </AnimatedContainer>
               {/**************************/}
               {/* DIVERSIDAD E INCLUSIÓN */}
               {/**************************/}
-              <CardInfo
-                icon={<IconInclusion />}
-                title="Diversidad e inclusión"
-                description="Fomentar un entorno inclusivo que celebre la diversidad de perspectivas, antecedentes culturales y experiencias, creando una comunidad global conectada."
-                maxWidth="967px"
-                background={`var(--colorBlueLight)`}
-                colorTitle="#fff"
-                colorDescription="#fff"
-              />
+              <AnimatedContainer animationType="fadeInLeft">
+                <CardInfo
+                  icon={<IconInclusion />}
+                  title="Diversidad e inclusión"
+                  description="Fomentar un entorno inclusivo que celebre la diversidad de perspectivas, antecedentes culturales y experiencias, creando una comunidad global conectada."
+                  maxWidth="967px"
+                  background={`var(--colorBlueLight)`}
+                  colorTitle="#fff"
+                  colorDescription="#fff"
+                />
+              </AnimatedContainer>
             </Box>
           </Stack>
         </Box>

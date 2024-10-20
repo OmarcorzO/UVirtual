@@ -24,6 +24,7 @@ import IconGraduate from "../../../assets/icons/IconGraduate";
 import IconStar from "../../../assets/icons/IconStar";
 import ListTeachers from "./components/listTeachers/ListTeachers";
 import PaginationComponent from "../../../components/pagination/Pagination";
+import AnimatedContainer from "../../../components/animatedContainer/AnimatedContainer";
 
 const TeachingStaff = () => {
   const [age, setAge] = useState("");
@@ -152,14 +153,14 @@ const TeachingStaff = () => {
             gap: "20px 0",
           }}
         >
-          <ListTeachers />
-          <ListTeachers />
-          <ListTeachers />
-          <ListTeachers />
-          <ListTeachers />
-          <ListTeachers />
-          <ListTeachers />
-          <ListTeachers />
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
+          <AnimatedContainer animationType="fadeInLeft"><ListTeachers /></AnimatedContainer>
         </Box>
 
         {/**************/}

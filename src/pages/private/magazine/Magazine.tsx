@@ -43,7 +43,7 @@ const Magazine = () => {
       {/* MAIN */}
       {/********/}
       <Box className="mainContent">
-       
+
         {/* <Box className="containerFilter">
          
           <FormControl className="selectWhite">
@@ -84,12 +84,12 @@ const Magazine = () => {
           </Button>
         </Box> */}
 
-<Typography className="title size40">
-            ¡Ingresa aquí!
-          </Typography>
+        <Typography className="title size40">
+          ¡Ingresa aquí!
+        </Typography>
         <Box className="containerCardsMagazine">
           {imgMagazines.map((item, index) => (
-            <CardImg key={index} img={item.img} url={item.url}/>
+            <CardImg key={index} img={item.img} url={item.url} />
           ))}
         </Box>
 

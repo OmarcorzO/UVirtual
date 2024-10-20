@@ -24,6 +24,18 @@ import imgSliderHover5 from "../../assets/images/sliderHover5.png";
 // IMG SLIDER MAESTRIA
 import imgSliderHover7 from "../../assets/images/sliderHover7.png";
 
+// CARRUSEL IMAGENES
+import carrusel1 from "../../assets/images/bannerAboutUs.png";
+import carrusel2 from "../../assets/images/bannerContactUs.png";
+import carrusel3 from "../../assets/images/bannerDetailsCourse.png";
+import carrusel4 from "../../assets/images/bannerDetailsProgram.png";
+import carrusel5 from "../../assets/images/bannerDoctorate.png";
+import carrusel6 from "../../assets/images/bannerHome.png";
+import carrusel7 from "../../assets/images/bannerMagazine.png";
+import carrusel8 from "../../assets/images/bannerOnlinePayments.png";
+import carrusel9 from "../../assets/images/bannerTeachingStaff.png";
+import carrusel10 from "../../assets/images/bannerUndergraduate.png";
+
 // API DE CARD DE NOTIFICACIONES
 export const cardItemNotificationApi = [
   {
@@ -548,6 +560,32 @@ export const infoDetailD0 = [
     description: "6 Semestres",
   },
 ];
+const studyPlanD0 = [
+  {
+    title: "I Semestre",
+    value: "Paradigmas de la Educación Contemporánea\nLegislación educativa\nGlobalización, comunicación y educación"
+  },
+  {
+    title: "II Semestre",
+    value: "Epistemología de las Ciencias Sociales\nTecnología educativa\nFundamentos de Investigación"
+  },
+  {
+    title: "III Semestre",
+    value: "Innovación en Instituciones de Educación Superior\nPlanificación por Competencias en Educación Superior\nInvestigación en Educación"
+  },
+  {
+    title: "IV Semestre",
+    value: "Análisis y Evaluación Organizacional\nInvestigación Cualitativa"
+  },
+  {
+    title: "V Semestre",
+    value: "Currículo\nInvestigación Cuantitativa y Mixta"
+  },
+  {
+    title: "VI Semestre",
+    value: "Evaluación Educativa\nSistemas Informáticos para la Gestión de las Instituciones Educativas\nSeminario de Tesis"
+  }
+]
 
 export const infoDetailD1 = [
   {
@@ -575,6 +613,32 @@ export const infoDetailD1 = [
     description: "6 Semestres",
   },
 ];
+const studyPlanD1 = [
+  {
+    title: "I Semestre",
+    value: "Filosofía del Derecho\nSistemas Jurídicos Contemporáneos\nEpistemología Jurídica"
+  },
+  {
+    title: "II Semestre",
+    value: "Teorías Jurídicas Contemporáneas\nHeurística y pensamiento complejo\nHermenéutica e interpretación jurídica"
+  },
+  {
+    title: "III Semestre",
+    value: "Defensa de la Constitución\nDogmática Jurídica\nMetodología de la Investigación"
+  },
+  {
+    title: "IV Semestre",
+    value: "Juicio Oral Civil y Familiar\nEnseñanza Activa del Derecho\nInvestigación cualitativa"
+  },
+  {
+    title: "V Semestre",
+    value: "Oralidad en materia Penal\nDidáctica jurídica\nInvestigación cuantitativa y mixta"
+  },
+  {
+    title: "VI Semestre",
+    value: "Criminología y Victimología\nJusticia para la paz\nSeminario de Tesis"
+  }
+]
 
 // PENSUM DE DOCTORADOS
 export const pensumDoctorate = [
@@ -589,6 +653,7 @@ export const pensumDoctorate = [
       `El Doctorado en Educación de la UVirtual, está diseñado para aquellos líderes apasionados por impulsar el cambio y la innovación en el ámbito educativo global. Este programa avanzado te preparará para investigar de manera profunda y transformar prácticas educativas, equilibrando teoría y práctica con un enfoque en la resolución de problemas reales en educación. A través de una comunidad académica vibrante y el apoyo de expertos en el campo, tendrás la oportunidad de explorar nuevas perspectivas, diseñar proyectos de investigación significativos y contribuir al desarrollo de políticas educativas que impacten positivamente a nivel local e internacional. ¡Únete a nosotros y marca la diferencia en el futuro de la educación!`,
     course: "Doctorado",
     egressInfo: "Los egresados del Doctorado en Educación serán capaces de evaluar críticamente los paradigmas, políticas, y prácticas educativas actuales utilizando un enfoque basado en la evidencia y teoría avanzada, así como aplicando una perspectiva multidisciplinar y holìstica en el abordaje y solución de problemáticas educativas, permitiendo identificar y analizar los puntos fuertes y áreas de mejora en diversos contextos educativos. Además de liderar proyectos de investigación y realizar cambios en la gestión organizacional, en donde se diseñen y apliquen estrategias innovadoras que influyan en formulación de políticas educativas inclusivas y equitativas, contribuyendo al desarrollo educativo.",
+    studyPlan: studyPlanD0,
     state: "Online",
     time: "23 meses",
     dateFirst: "25/08/2024",
@@ -609,6 +674,7 @@ export const pensumDoctorate = [
       `El Doctorado en Derecho de la UVirtual está diseñado para aquellos apasionados por la justicia y el conocimiento jurídico avanzado. Este programa te ofrece la oportunidad única de explorar temas legales complejos y contemporáneos a profundidad, guiado por destacados académicos y profesionales del derecho. Con un enfoque en la investigación original y la contribución al desarrollo del derecho, estarás preparado para liderar cambios significativos en el ámbito legal global. Desde la teoría hasta la práctica, desde el aula hasta el tribunal internacional, este doctorado te capacitará para enfrentar los desafíos legales más exigentes del mundo actual y convertirte en un líder en tu campo.\nÚnete a nuestra comunidad académica y da el siguiente paso hacia una carrera jurídica excepcional.`,
     course: "Doctorado",
     egressInfo: "Los egresados del Doctorado en Derecho serán capaces de generar conocimiento jurídico innovador y de calidad e impartir enseñanza del derecho con un enfoque crítico y reflexivo, así como analizar, interpretar y aplicar el derecho de manera analítica y crítica con una sólida preparación teórica y práctica a partir de adquirir habilidades de investigación, análisis y argumentación jurídica, para intervenir en problemas legales complejos desde una perspectiva interdisciplinaria, e influir positivamente en la sociedad, desempeñándose como líderes en instituciones académicas, centros de investigación y organismos dedicados a la administración de justicia, promoviendo la excelencia académica, la justicia social y el respeto a los derechos humanos.",
+    studyPlan: studyPlanD1,
     state: "Online",
     time: "23 meses",
     dateFirst: "25/08/2024",
@@ -647,6 +713,39 @@ export const infoDetailP0 = [
     description: "8 Semestres",
   },
 ];
+const studyPlanL0 = [
+  {
+    title: "I Semestre",
+    value: `Algebra y matemáticas discretas\nEstadística\nIntroducción a la Ciencia de Datos\nCálculo y métodos numéricos\nFundamentos de la Programación`
+  },
+  {
+    title: "II Semestre",
+    value: "Modelos de probabilidad\nAnálisis multivariante\nFundamentos de la empresa\nEstructura de Datos\nTratamiento de Datos"
+  },
+  {
+    title: "III Semestre",
+    value: "Redes y Seguridad\nOptimización I\nÉtica y protección de datos\nAprendizaje estadístico\nBases de datos"
+  },
+  {
+    title: "IV Semestre",
+    value: "Infraestructura para el procesamiento de datos\nOptimización II\nAprendizaje automático I\nAnálisis bayesiano de datos\nProgramación avanzada"
+  },
+  {
+    title: "V Semestre",
+    value: "Gestión de proyectos en Ciencia de Datos\nInteligencia Artificial e Ingeniería del Conocimiento\nModelización predicativa\nSeñales y Sistemas\nComputación masiva"
+  },
+  {
+    title: "VI Semestre",
+    value: "Aprendizaje automático II\nBases de datos avanzadas y distribuidas\nComunicación y liderazgo\nMinería de datos masivos\nSistemas distribuidos a gran escala"
+  },
+  {
+    title: "VII Semestre",
+    value: "Procesamiento del lenguaje natural\nVisualización de datos\nRedes neuronales\nAprendizaje profundo\nSeminario de Tesis I"
+  },
+  {
+    title: "VIII Semestre",
+    value: "Sistemas estadísticos\nOptativa I\nOptativa II\nSeminario de Tesis II"  },
+]
 
 export const infoDetailP1 = [
   {
@@ -674,6 +773,39 @@ export const infoDetailP1 = [
     description: "8 Semestres",
   },
 ];
+const studyPlanL1 = [
+  {
+    title: "I Semestre",
+    value: "Estadística Básica\nFundamentos de Programación\nDesarrollo Humano\nCálculo Diferencial\nSistemas Operativos\nFundamentos de Investigación"
+  },
+  {
+    title: "II Semestre",
+    value: "Análisis y Diseño de Objetos\nProgramación\nFundamentos de la Administración\nCálculo Integral\nSociedad y Economía\nHabilidades del pensamiento"
+  },
+  {
+    title: "III Semestre",
+    value: "Programación de Objetos\nMatemáticas discretas\nModelado de negocios\nFundamentos de redes\nEstructura de datos I\nÉtica profesional"
+  },
+  {
+    title: "IV Semestre",
+    value: "Introducción a la ingeniería de Software\nDiseño de bases de Datos\nPlaneación estratégica\nEstructuras Discretas\nEstructura de datos II\nInvestigación de Operaciones"
+  },
+  {
+    title: "V Semestre",
+    value: "Diseño y arquitectura de software\nProgramación con acceso a datos .net\nIngeniería económica\nMinería de datos\nMetodologías de Software\nAlgoritmos y complejidad"
+  },
+  {
+    title: "VI Semestre",
+    value: "Proyectos de Inversión\nCompiladores\nDiseño Web\nAdministración de Sistemas-DevOps\nModelos de calidad de software\nProgramación Móvil I"
+  },
+  {
+    title: "VII Semestre",
+    value: "Métricas de desarrollo de software\nBases de datos NoSQL\nFundamentos de Inteligencia Artificial\nProgramación Web I\nSeminario de Investigación"
+  },
+  {
+    title: "VIII Semestre",
+    value: "Pruebas y mantenimiento de sistemas de software\nProgramación Móvil II\nSeguridad Informática\nProgramación Web II\nDesarrollo de software"  },
+]
 
 export const infoDetailP2 = [
   {
@@ -701,6 +833,44 @@ export const infoDetailP2 = [
     description: "9 Cuatrimestres",
   },
 ];
+const studyPlanL2 = [
+  {
+    title: "I Cuatrimestre",
+    value: "Filosofía y epistemología de la educación\nPsicología del Aprendizaje\nIntroducción a la Pedagogía Digital\nComunicación en entornos digitales de aprendizaje"
+  },
+  {
+    title: "II Cuatrimestre",
+    value: "Teorías y Modelos de la Educación virtual\nLegislación y política educativa\nTecnologías Educativas\nCompetencias Digitales para la educación"
+  },
+  {
+    title: "III Cuatrimestre",
+    value: "Didáctica Digital\nMetodologías colaborativas y creativas\nDiseño Instruccional\nInvestigación educativa digital"
+  },
+  {
+    title: "IV Cuatrimestre",
+    value: "Diseño e innovación Curricular\nAprendizaje Adaptativo y Personalizado\nEvaluación en entornos Digitales\nDesarrollo de Contenidos digitales"
+  },
+  {
+    title: "V Cuatrimestre",
+    value: "Inclusión y accesibilidad en entornos digitales\nDiseño de experiencias mediadas por ciencias y tecnologías\nGamificación en la Educación Digital\nDesarrollo de contenidos audiovisual"
+  },
+  {
+    title: "VI Cuatrimestre",
+    value: "Educación en Contextos Multiculturales y Globales\nFormación y evaluación docente\nGestión de Plataformas E-learning\nÉtica y Resposabilidad social"
+  },
+  {
+    title: "VII Cuatrimestre",
+    value: "Gestión de Proyectos Educativos Digitales\nAdministración y gestión educativa\nDiseño de entornos virtuales de aprendizaje\nLiderazgo en Educación Digital"
+  },
+  {
+    title: "VIII Cuatrimestre",
+    value: "Seguridad en Entornos Digitales\nInteligencia Artificial en Educación\nOptativa I\nProyecto de investigación educativa"  
+  },
+  {
+    title: "IX Cuatrimestre",
+    value: "Desarrollo de Aplicaciones Educativas\nSeminario de Actualización Tecnológica\nOptativa II\nSeminario de Tesis"  
+  },
+]
 
 // PENSUM DE PREGRADOS,
 export const pensumPrograms = [
@@ -715,6 +885,7 @@ export const pensumPrograms = [
       \nÚnete a nosotros en la Licenciatura en Ingeniería en Ciencia de Datos y da el primer paso para convertirte en un agente de cambio, preparado para transformar el vasto océano de datos en decisiones estratégicas y soluciones innovadoras.`,
     course: "Pregrado",
     egressInfo: "Los egresados de la Licenciatura en Ingeniería en Ciencia de Datos serán capaces de recopilar, procesar, analizar y extraer conocimiento a partir de grandes volúmenes de datos a partir del manejo de técnicas, herramientas y metodologías con el fin de tomar decisiones informadas y resolver problemas en diversos contextos empresariales y científicos. Así como también, desarrollarán habilidades de comunicación, liderazgo y trabajo en equipo que les permitirá colaborar efectivamente en equipos interdisciplinarios y gestionar proyectos de manera exitosa.",
+    studyPlan: studyPlanL0,
     state: "Online",
     time: "8 Semestres",
     dateFirst: "25/08/2024",
@@ -736,6 +907,7 @@ export const pensumPrograms = [
     `,
     course: "Pregrado",
     egressInfo: "Los egresados de la Licenciatura en Ingeniería en Desarrollo de Software serán capaces de diseñar, desarrollar, implementar y mantener sistemas de software, aplicando metodologías y técnicas avanzadas para crear soluciones tecnológicas innovadoras y eficientes. Estarán preparados para enfrentar los desafíos del mercado laboral actual, con habilidades técnicas sólidas y una comprensión profunda de la gestión de proyectos, la seguridad informática y la programación en diversas plataformas, tanto web como móviles. Además, estarán equipados para trabajar de manera colaborativa en equipos multidisciplinarios, gestionar riesgos y asegurar la calidad del software, en  empresas de tecnología, instituciones financieras, organizaciones gubernamentales, empresas de consultoría, así como en startups y proyectos propios contribuyendo así al avance tecnológico y al desarrollo sostenible de la sociedad.",
+    studyPlan: studyPlanL1,
     state: "Online",
     time: "8 Semestres",
     dateFirst: "25/08/2024",
@@ -755,6 +927,7 @@ export const pensumPrograms = [
     longDescription: `El programa de Licenciatura en Pedagogía Digital y Tecnologías del Aprendizaje está diseñado para formar profesionales capaces de transformar la educación mediante el uso de tecnologías innovadoras y metodologías creativas. A lo largo del programa, adquirirás habilidades en el diseño de contenidos interactivos e inclusivos, integrando herramientas digitales que fomenten el aprendizaje adaptativo y personalizado. Además, aprenderás a utilizar plataformas tecnológicas, aplicando enfoques de enseñanza innovadores como la gamificación, el aprendizaje STEAM y la educación Maker, para crear experiencias educativas que respondan a las necesidades de los entornos digitales y multiculturales actuales. Este programa combina la pedagogía con el dominio de tecnologías emergentes, preparándolos para liderar proyectos educativos, gestionar plataformas e-learning, y promover la inclusión y accesibilidad en el ámbito educativo digital.`,
     course: "Pregrado",
     egressInfo: "Los egresados de la Licenciatura en Pedagogía Digital y Tecnologías del Aprendizaje serán capaces de diseñar, gestionar e implementar procesos educativos innovadores y personalizados en entornos digitales, integrando principios pedagógicos, tecnologías emergentes y metodologías colaborativas que promuevan un aprendizaje inclusivo y adaptativo, desarrollando y evaluando contenidos digitales, gamificados, audiovisuales y multimedia, aplicando criterios de accesibilidad, ética y responsabilidad social.",
+    studyPlan: studyPlanL2,
     state: "Online",
     time: "8 Semestres",
     dateFirst: "25/08/2024",
@@ -793,6 +966,24 @@ export const infoDetailM0 = [
     description: "4 Cuatrimestres",
   },
 ];
+const studyPlanM0 = [
+  {
+    title: "I Cuatrimestre",
+    value: "Filosofía de la Ciencia\nLegislación educativa\nProcesos educativos"
+  },
+  {
+    title: "II Cuatrimestre",
+    value: "Evaluación educativa\nCurrículo\nInvestigación Cualitativa"
+  },
+  {
+    title: "III Cuatrimestre",
+    value: "Modelos de formación docente\nTecnologías en la educación\nInvestigación Cuantitativa y mixta"
+  },
+  {
+    title: "IV Cuatrimestre",
+    value: "Calidad en Educación\nEducación virtual y a distancia\nSeminario de Investigación"
+  }
+]
 
 // PENSUM DE MAESTRIAS,
 export const pensumMastery = [
@@ -807,6 +998,7 @@ export const pensumMastery = [
       Aprende a integrar las últimas tecnologías en el aula para mejorar el proceso de enseñanza-aprendizaje, desarrollar competencias en liderazgo y administración de instituciones educativas y adquiere habilidades en investigación cualitativa y cuantitativa para analizar y mejorar prácticas educativas basadas en evidencia.`,
     course: "Maestria",
     egressInfo: "Los egresados de la Maestría en Educación serán capaces de diseñar, implementar y evaluar procesos y programas educativos innovadores que contribuyan a la calidad educativa y den respuesta a las necesidades que enfrenta el sistema educativo y la práctica profesional en entornos diversos a través de una formación teórico-conceptual y práctico-instrumental, incorporando procesos de investigación y gestión, así como las nuevas tecnologías para establecer soluciones a los retos contemporáneos en el ámbito educativo con un enfoque multidisciplinario y centrado en la mejora de la educación.",
+    studyPlan: studyPlanM0,
     state: "Online",
     time: "6 Semestres",
     dateFirst: "25/08/2024",
@@ -820,9 +1012,28 @@ export const pensumMastery = [
 
 // IMG SLIDER COMPLETE
 export const imgSlyderComplete = [
-  imgSliderComplete,
-  imgSliderComplete2,
-  imgSliderComplete3,
+  {
+    image: imgSliderComplete,
+    quote:
+      "“Quede infinitamente agradecido con las nuevas herramientas y habilidades y ya estoy poniendo en práctica”",
+    name: "Diego Vélez",
+    profession: "Doctorado en Ciencias de la Computación",
+    rating: 5,
+  },
+  {
+    image: imgSliderComplete2,
+    quote: "“La experiencia ha sido transformadora, he aprendido mucho.”",
+    name: "María González",
+    profession: "Máster en Ingeniería de Software",
+    rating: 4,
+  },
+  {
+    image: imgSliderComplete3,
+    quote: "“Excelentes cursos y un gran equipo de docentes.”",
+    name: "Juan Pérez",
+    profession: "Licenciatura en Matemáticas",
+    rating: 5,
+  },
 ];
 
 // IMG SLIDER PROGRAMA
@@ -882,5 +1093,39 @@ export const imgSliderMastery = [
     description:
       "Impulsa tu carrera y transforma la educación con nuestra Maestría en Educación: ¡Sé el cambio que deseas ver en el aula!",
     path: "details-program",
+  },
+];
+
+// IMG SLIDER DOCTORADO
+export const carruselApi = [
+  {
+    image: carrusel1,
+  },
+  {
+    image: carrusel2,
+  },
+  {
+    image: carrusel3,
+  },
+  {
+    image: carrusel4,
+  },
+  {
+    image: carrusel5,
+  },
+  {
+    image: carrusel6,
+  },
+  {
+    image: carrusel7,
+  },
+  {
+    image: carrusel8,
+  },
+  {
+    image: carrusel9,
+  },
+  {
+    image: carrusel10,
   },
 ];

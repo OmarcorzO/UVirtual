@@ -1,7 +1,4 @@
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
   Button,
   FormControl,
@@ -11,11 +8,18 @@ import {
   Select,
   SelectChangeEvent,
   Typography,
+  styled
 } from "@mui/material";
+import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
+import MuiAccordionSummary, {
+  AccordionSummaryProps,
+} from "@mui/material/AccordionSummary";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
 
 // IMPORTADOS
 import "./contentProgram.scss";
 import IconDownload from "../../../../../assets/icons/IconDownload";
+import IconArrowDown from "../../../../../assets/icons/IconArrowDown";
 import {
   pensumPrograms,
   pensumDoctorate,
@@ -40,9 +44,45 @@ const validatePensum = (code: string) => {
   }
 };
 
+const Accordion = styled((props: AccordionProps) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  backgroundColor: "transparent",
+  border: `0px solid ${theme.palette.divider}`,
+  "&:not(:last-child)": {
+    borderBottom: 0,
+  },
+  "&::before": {
+    display: "none",
+  },
+}));
+
+const AccordionSummary = styled((props: AccordionSummaryProps) => (
+  <MuiAccordionSummary expandIcon={<IconArrowDown />} {...props} />
+))(({ theme }) => ({
+  backgroundColor: "transparent",
+  color: "var(--colorGrey)",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(90deg)",
+  },
+  "& .MuiAccordionSummary-content": {
+    marginLeft: theme.spacing(0),
+  },
+  ...theme.applyStyles("dark", {
+    backgroundColor: "rgba(255, 255, 255, .05)",
+  }),
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: "0px solid rgba(0, 0, 0, .125)",
+  color: "var(--colorGrey)",
+}));
+
 const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
   const [age, setAge] = useState("");
-  const [expanded, setExpanded] = React.useState<string | false>("panel1");
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+  // "panel0"
 
   const handleChange =
     (panel: string) => (_event: React.SyntheticEvent, newExpanded: boolean) => {
@@ -219,25 +259,25 @@ const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
           {/*********/}
           <Typography className="title size32">Plan de estudios</Typography>
 
-          <Accordion
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
-        >
-          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Typography className="size25">Lorem ipsum</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography className="size20">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
+          {validatePensum(codeData)![posData].studyPlan.map((item, index) => (
+            <Accordion
+              expanded={expanded === `panel${index}`}
+              onChange={handleChange(`panel${index}`)}
+            >
+              <AccordionSummary aria-controls="panel0d-content" id="panel0d-header">
+                <Typography className="size25">{item.title}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography className="size20">
+                  {item.value.split("\n").map(item => (
+                    <>
+                      • {item}<br />
+                    </>
+                  ))}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
 
           {/*******************/}
           {/* BOTON DESCARGAR */}

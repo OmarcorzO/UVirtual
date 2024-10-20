@@ -17,6 +17,7 @@ import {
 // IMPORTADOS
 import "../undergraduate/undergraduate.scss";
 import {
+  carruselApi,
   pensumDoctorate,
   selectArea,
 } from "../../../components/dataApi/DataApi";
@@ -26,6 +27,7 @@ import CustomerService from "../../../components/customerService/CustomerService
 import IconSearch from "../../../assets/icons/IconSearch";
 import CardPensum from "../../../components/cardPensum/CardPensum";
 import PaginationComponent from "../../../components/pagination/Pagination";
+import Carrusel from "../../../components/carrusel/Carrusel";
 
 const Doctorate = () => {
   const [age, setAge] = useState("");
@@ -43,11 +45,15 @@ const Doctorate = () => {
       {/**********/}
       {/* BANNER */}
       {/**********/}
-      <Banner
+      {/* <Banner
         urlImage={ImgBanner}
         title="Doctorados"
         description="El Doctorado no solo es un título académico, sino una travesía de investigación, dedicación y descubrimiento que redefine el conocimiento en un campo específico."
-      />
+      /> */}
+
+      <Box sx={{ padding: "45px"}}>
+        <Carrusel images={carruselApi}/>
+      </Box>
 
       {/********/}
       {/* MAIN */}
