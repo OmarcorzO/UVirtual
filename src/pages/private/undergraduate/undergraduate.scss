@@ -14,6 +14,19 @@
   }
 }
 
+// CONTENEDOR DE FILTRO
+.containerFilter {
+  display: flex;
+  place-content: center;
+  gap: 20px;
+
+  // BOTON BUSCAR
+  .btnSearch {
+    padding: 0 30px;
+    min-width: auto;
+  }
+}
+
 .containerCardsUndergraduate {
   display: flex;
   flex-direction: column;

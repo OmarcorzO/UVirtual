@@ -5,8 +5,14 @@ import imgMagazine1 from "../../assets/images/magazineSapiens.png";
 import imgPensumCourse1 from "../../assets/images/imgPensumCourse.jpg";
 
 // PENSUM PREGRADOS, MAESTRIA, DOCTORADOS
-import imgPensumStudent1 from "../../assets/images/imgPensumStudent.png";
-import imgPensumProgramDoctorate1 from "../../assets/images/imgPensumDoctorate.png";
+import imgPensumStudent0 from "../../assets/images/sliderHover0.png";
+import imgPensumStudent1 from "../../assets/images/imgPensumStudent1.jpg";
+import imgPensumStudent2 from "../../assets/images/sliderHover2.png";
+
+import imgPensumProgramDoctorate0 from "../../assets/images/sliderHover3.png";
+import imgPensumProgramDoctorate1 from "../../assets/images/sliderHover5.png";
+
+import imgPensumMaestria0 from "../../assets/images/imgPensumMaestria0.png";
 
 // IMG SLIDER COMPLETE
 import imgSliderComplete from "../../assets/images/imgSlyderComplete.png";
@@ -14,21 +20,21 @@ import imgSliderComplete2 from "../../assets/images/imgPensumDoctorate.png";
 import imgSliderComplete3 from "../../assets/images/imgPensumDoctorate.png";
 
 // IMG SLIDER PROGRAMA
+import imgSliderHover0 from "../../assets/images/sliderHover0.png";
 import imgSliderHover1 from "../../assets/images/sliderHover1.png";
 import imgSliderHover2 from "../../assets/images/sliderHover2.png";
 
 // IMG SLIDER DOCTORADOS
-import imgSliderHover4 from "../../assets/images/sliderHover4.png";
+import imgSliderHover3 from "../../assets/images/sliderHover3.png";
 import imgSliderHover5 from "../../assets/images/sliderHover5.png";
 
 // IMG SLIDER MAESTRIA
 import imgSliderHover7 from "../../assets/images/sliderHover7.png";
 
+// VIDEOS PROGRAMAS
+// MUY HEAVYS SE SUBEN A YOUTUBE
+
 // CARRUSEL IMAGENES
-import carrusel1 from "../../assets/images/bannerAboutUs.png";
-import carrusel2 from "../../assets/images/bannerContactUs.png";
-import carrusel3 from "../../assets/images/bannerDetailsCourse.png";
-import carrusel4 from "../../assets/images/bannerDetailsProgram.png";
 import carrusel5 from "../../assets/images/bannerDoctorate.png";
 import carrusel6 from "../../assets/images/bannerHome.png";
 import carrusel7 from "../../assets/images/bannerMagazine.png";
@@ -72,12 +78,12 @@ export const cardItemServices = [
       "Informate acerca de los nuevos descubrimientos y avances de las ciencias en el catálogo de contenido que tenemos a tu disposición.",
     view: "magazine",
   },
-  {
-    title: "Nuestros Eventos",
-    description:
-      "Informate acerca de nuestros eventos nacionales e internacionales.",
-    view: "pend",
-  },
+  // {
+  //   title: "Nuestros Eventos",
+  //   description:
+  //     "Informate acerca de nuestros eventos nacionales e internacionales.",
+  //   view: "pend",
+  // },
 ];
 
 // SELECT AREA
@@ -644,7 +650,7 @@ const studyPlanD1 = [
 export const pensumDoctorate = [
   {
     code: "doctorate",
-    img: imgPensumProgramDoctorate1,
+    img: imgPensumProgramDoctorate0,
     title: "Doctorado en Educación",
     infoDetail: infoDetailD0,
     description:
@@ -662,6 +668,8 @@ export const pensumDoctorate = [
     path: "details-program",
     footer: "PRECIO COMPLETO",
     anexe: "src/anexes/anexo_mapa_curricular_doctorado_educacion.pdf",
+    // video: videoDoctoradoEduca
+    video: "https://www.youtube.com/embed/Sq-0wV7WxAU?si=c5f083JXA0P4vXjD"
   },
   {
     code: "doctorate",
@@ -683,6 +691,7 @@ export const pensumDoctorate = [
     path: "details-program",
     footer: "PRECIO COMPLETO",
     anexe: "src/anexes/anexo_mapa_curricular_doctorado_derecho.pdf",
+    video: "https://www.youtube.com/embed/ItebpP4WX_I?si=pvWiNmEl7DUDdy5F"
   },
 ];
 
@@ -872,11 +881,18 @@ const studyPlanL2 = [
   },
 ]
 
+// LIST WORK PROGRAMS
+export const listWorkProgram = [
+  {desc: "•	Gerente de Ciencia de Datos:|, Supervisando equipos de científicos de datos y coordina proyectos para asegurar el éxito en la implementación de soluciones basadas en datos.\n•	Científico de Datos:| Analizando grandes volúmenes de datos para extraer información valiosa y ayudar en la toma de decisiones estratégicas de diferentes empresas.\n•	Ingeniero o Analista de Datos:| Diseñando, construyendo, analizando y manteniendo la infraestructura de datos necesaria para la recolección y análisis eficiente de datos.\n•	Ingeniero de Machine Learning:| Desarrollando e implementado modelos de aprendizaje automático para resolver problemas específicos dentro de una industria u organización publica o privada. \n•	Consultor de Ciencia de Datos:| Asesorando a organizaciones sobre cómo aprovechar sus datos para mejorar procesos y resultados.\n•	Especialista en Inteligencia de Negocios (BI):| Desarrollando y manteniendo sistemas de BI que permiten a las empresas acceder a información crítica para la toma de decisiones.\n•	Especialista en Análisis Predictivo:| Utilizando técnicas estadísticas y de aprendizaje automático para predecir futuros eventos y comportamientos."}, 
+  {desc: "•	Gerente de Desarrollo de Software:| Dirigiendo equipos de desarrollo, planificando estrategias tecnológicas, y asegurando la calidad y eficiencia de los proyectos de software en la empresa.\n•	Desarrollador de Software:| Creando aplicaciones y programas para diversas plataformas y dispositivos.\n•	Ingeniero de Sistemas:| Diseñando, implementando y manteniendo la infraestructura tecnológica de las organizaciones.\n•	Gestor de Proyectos Tecnológicos:| Liderando equipos y gestionando la entrega exitosa de soluciones de software.\n•	Consultor Tecnológico:| Asesorando a empresas en la implementación y optimización de tecnologías de software.\n•	Emprendedor Tecnológico:| Desarrollando productos innovadores y fundando su propia empresa en el sector tecnológico."}, 
+  {desc: "•	Diseñador de Contenidos Educativos Digitales:| Crea materiales de aprendizaje interactivos y multimedia, adaptados a plataformas virtuales y centrados en la experiencia del usuario.\n•	Docente de áreas STEAM:| Responsable de diseñar y ejecutar experiencias educativas innovadoras que integren estos campos de conocimiento de manera interdisciplinaria.\n•	Consultor en Innovación Educativa:| Asesorar a instituciones educativas en la implementación de nuevas tecnologías y metodologías innovadoras para mejorar los procesos de enseñanza-aprendizaje.\n•	Formador de Docentes en Tecnología Educativa:| Capacita a profesores en el uso de herramientas digitales y metodologías pedagógicas para la enseñanza en entornos virtuales y presenciales.\n•	Coordinador de Proyectos Educativos Virtuales:| Dirige proyectos de formación en línea, diseñando estrategias pedagógicas y supervisando su ejecución en plataformas digitales.\n•	Especialista en Inclusión y Accesibilidad Digital:| Desarrolla y adapta contenidos y entornos educativos para garantizar la inclusión de estudiantes con diversas necesidades y capacidades.\n•	Tutor Virtual:| Brinda apoyo académico y acompañamiento a estudiantes en entornos de aprendizaje en línea, facilitando su progreso y resolución de dudas.\n•	Investigador en Educación Digital:| Desarrolla investigaciones sobre nuevas tendencias, herramientas y metodologías en el ámbito de la educación digital para mejorar las prácticas educativas."}, 
+]
+
 // PENSUM DE PREGRADOS,
 export const pensumPrograms = [
   {
     code: "program",
-    img: imgPensumStudent1,
+    img: imgPensumStudent0,
     title: "Licenciatura en Ingeniería en Ciencia de Datos",
     infoDetail: infoDetailP0,
     description:
@@ -894,6 +910,7 @@ export const pensumPrograms = [
     path: "details-program",
     footer: "PRECIO POR SEMESTRE",
     anexe: "src/anexes/anexo_mapa_curricular_lic_ciencia_de_datos.pdf",
+    video: "https://www.youtube.com/embed/FaCUwpKDKdc?si=z85Y9Gj2TwnfN8Nk"
   },
   {
     code: "program",
@@ -916,10 +933,11 @@ export const pensumPrograms = [
     path: "details-program",
     footer: "PRECIO POR SEMESTRE",
     anexe: "src/anexes/anexo_mapa_curricular_lic_ing_desarrollo_de_software.pdf",
+    video: "https://www.youtube.com/embed/n1ltCzxm4LQ?si=dt7Fubeh31Kh_8gF"
   },
   {
     code: "program",
-    img: imgPensumStudent1,
+    img: imgPensumStudent2,
     title: "Licenciatura en Pedagogía Digital y Tecnologias del Aprendizaje",
     infoDetail: infoDetailP2,
     description:
@@ -936,6 +954,7 @@ export const pensumPrograms = [
     path: "details-program",
     footer: "PRECIO POR SEMESTRE",
     anexe: "src/anexes/anexo_mapa_curricular_lic_pedagogia_digital.pdf",
+    video: "https://www.youtube.com/embed/C4fIfYjQIpQ?si=RVA4pQdFFF7KVzX1"
   },
 ];
 
@@ -989,7 +1008,7 @@ const studyPlanM0 = [
 export const pensumMastery = [
   {
     code: "mastery",
-    img: imgPensumStudent1,
+    img: imgPensumMaestria0,
     title: "Maestría en Educación",
     infoDetail: infoDetailM0,
     description:
@@ -1007,6 +1026,7 @@ export const pensumMastery = [
     path: "details-program",
     footer: "PRECIO POR SEMESTRE",
     anexe: "src/anexes/anexo_mapa_curricular_maestria_educacion.pdf",
+    video: "https://www.youtube.com/embed/KZN71gTGL_I?si=smBWRdJT7UUNvIw5"
   },
 ];
 
@@ -1040,7 +1060,7 @@ export const imgSlyderComplete = [
 export const imgSliderProgram = [
   {
     code: "program",
-    img: imgSliderHover1,
+    img: imgSliderHover0,
     title: "Licenciatura en Ingeniería en Ciencia de Datos",
     description:
       "Diseña y crea sistemas para recopilar y transformar datos en información utilizable para la ciencia de los datos.",
@@ -1048,7 +1068,7 @@ export const imgSliderProgram = [
   },
   {
     code: "program",
-    img: imgSliderHover2,
+    img: imgSliderHover1,
     title: "Licenciatura en Ingeniería de Desarrollo en Software",
     description:
       "¡Aprende a diseñar, desarrollar y mantener soluciones de software innovadoras y efectivas con nuestra Licenciatura en Ingeniería en Desarrollo de Software!.",
@@ -1056,7 +1076,7 @@ export const imgSliderProgram = [
   },
   {
     code: "program",
-    img: imgSliderHover1,
+    img: imgSliderHover2,
     title: "Licenciatura en Pedagogía Digital y Tecnologias del Aprendizaje",
     description:
       "Conviértete en un líder en la educación digital y adquiere las competencias clave para diseñar entornos de aprendizaje del futuro....",
@@ -1068,7 +1088,7 @@ export const imgSliderProgram = [
 export const imgSliderDoctorate = [
   {
     code: "doctorate",
-    img: imgSliderHover4,
+    img: imgSliderHover3,
     title: "Doctorado en Educación",
     description:
       "Conviértete en un agente de cambio educativo global con nuestro Doctorado en Educación: investiga, innova y lidera la transformación del aprendizaje.",
@@ -1098,18 +1118,6 @@ export const imgSliderMastery = [
 
 // IMG SLIDER DOCTORADO
 export const carruselApi = [
-  {
-    image: carrusel1,
-  },
-  {
-    image: carrusel2,
-  },
-  {
-    image: carrusel3,
-  },
-  {
-    image: carrusel4,
-  },
   {
     image: carrusel5,
   },

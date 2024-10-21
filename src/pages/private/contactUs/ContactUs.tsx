@@ -15,8 +15,11 @@ import {
 import "./contactUs.scss";
 import Banner from "../../../components/banner/Banner";
 import ImgBanner from "../../../assets/images/bannerContactUs.png";
+import gifLogin from "../../../assets/images/video-login.gif";
+import videoLogin from "../../../assets/videos/video-login-reduced.mp4";
 import { useState } from "react";
 import IconColombia from "../../../assets/icons/IconColombia";
+import BannerVideo from "../../../components/bannerVideo/BannerVideo";
 
 const ContactUs = () => {
   const [age, setAge] = useState("");
@@ -30,8 +33,9 @@ const ContactUs = () => {
       {/**********/}
       {/* BANNER */}
       {/**********/}
+      {/* <BannerVideo linkVideo={videoLogin}/> */}
       <Banner
-        urlImage={ImgBanner}
+        urlImage={gifLogin}
         title="Contáctanos"
         description=""
       />

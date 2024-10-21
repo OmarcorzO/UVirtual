@@ -5,7 +5,7 @@ import "./detailsProgram.scss";
 import {
   pensumPrograms,
   pensumDoctorate,
-  pensumMastery,
+  pensumMastery
 } from "../../../components/dataApi/DataApi";
 import Banner from "../../../components/banner/Banner";
 import ImgBanner from "../../../assets/images/bannerDetailsProgram.png";
@@ -13,6 +13,7 @@ import CustomerService from "../../../components/customerService/CustomerService
 import ContentProgram from "./components/contentProgram/ContentProgram";
 import ImgBlue from "../../../assets/images/imgBlue.png";
 import SliderCommit from "../../../components/sliderCommit/SliderCommit";
+import BannerVideo from "../../../components/bannerVideo/BannerVideo";
 
 // ITEM DEL STACK DE INFORMACION
 const Item = styled(Paper)(() => ({
@@ -54,6 +55,9 @@ const DetailsProgram = () => {
       {/* BANNER */}
       {/**********/}
       {/* Se implementará info respectica del programa, doctorado, etc. que seleccione */}
+      <Box sx={{ paddingTop: 20}}>
+        <BannerVideo linkVideo={validatePensum(code)![pos].video}/>
+      </Box>
       <Banner
         urlImage={ImgBanner}
         title={validatePensum(code)![pos].title}
@@ -91,7 +95,7 @@ const DetailsProgram = () => {
           {/******************/}
           <Box className="infoPrice">
             <Typography className="size20">PRECIO DEL SEMESTRE</Typography>
-            <Typography className="size40">
+            <Typography className="size40 expanded">
               $ {validatePensum(code)![pos].value}
             </Typography>
           </Box>

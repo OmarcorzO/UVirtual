@@ -42,7 +42,7 @@ const Magazine = () => {
       {/********/}
       {/* MAIN */}
       {/********/}
-      <Box className="mainContent">
+      <Box className="mainContent" sx={{ gap: "20px" }}>
 
         {/* <Box className="containerFilter">
          

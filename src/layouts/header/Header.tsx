@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Box, Button, Drawer, IconButton, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 // IMPORTADOS
 import "./header.scss";
@@ -18,6 +18,7 @@ import IconWhatsapp from "../../assets/icons/IconWhatsapp";
 type Anchor = "top";
 
 const Header = () => {
+  const ubi = useLocation()
   const navigate = useNavigate();
   const [stateDrawer, setStateDrawer] = useState({
     top: false,
@@ -116,7 +117,7 @@ const Header = () => {
   );
 
   return (
-    <Box className="containerHeader">
+    <Box className="containerHeader" sx={{ backgroundColor: ubi.pathname === "/details-program" ? "var(--colorBeige)" : "transparent",  padding: ubi.pathname === "/details-program" ? "50px" : "100px"}}>
       {/********/}
       {/* LOGO */}
       {/********/}
@@ -162,15 +163,16 @@ const Header = () => {
               {/*********************/}
               {/* BOTON HAMBURGUESA */}
               {/*********************/}
+              {/* btnGradientBorderOrangeCircle (Posible clase para el button verificar)*/}
               <Button
                 className="btnBurguer"
-                disableTouchRipple
+                disableRipple
                 onClick={toggleDrawer(anchor, true)}
               >
-                <Typography component={"p"} className="size18">
+                <Typography component={"p"} className="size18" color="var(--colorOrangeDark) !important">
                 Menú
               </Typography>
-                <IconBurguer />
+                <IconBurguer color="var(--colorOrangeDark)"/>
               </Button>
 
               {/**********/}

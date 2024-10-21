@@ -19,15 +19,16 @@ import MuiAccordionDetails from "@mui/material/AccordionDetails";
 // IMPORTADOS
 import "./contentProgram.scss";
 import IconDownload from "../../../../../assets/icons/IconDownload";
-import IconArrowDown from "../../../../../assets/icons/IconArrowDown";
 import {
   pensumPrograms,
   pensumDoctorate,
   pensumMastery,
   selectArea,
+  listWorkProgram,
 } from "../../../../../components/dataApi/DataApi";
 import React, { useState } from "react";
 import IconArrowUpRight from "../../../../../assets/icons/IconArrowUpRight";
+import IconArrowBottom from "../../../../../assets/icons/IconArrowBottom";
 
 interface ContentProgramProps {
   codeData: string;
@@ -58,7 +59,7 @@ const Accordion = styled((props: AccordionProps) => (
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
-  <MuiAccordionSummary expandIcon={<IconArrowDown />} {...props} />
+  <MuiAccordionSummary expandIcon={<IconArrowBottom />} {...props} />
 ))(({ theme }) => ({
   backgroundColor: "transparent",
   color: "var(--colorGrey)",
@@ -156,99 +157,25 @@ const ContentProgram = ({ codeData, posData }: ContentProgramProps) => {
         {/******************/}
         {/* DONDE TRABAJAR */}
         {/******************/}
-        <Box className="whereWork">
-          {/**********/}
-          {/* TITULO */}
-          {/**********/}
-          <Typography className="title size32">¿Dónde trabajar?</Typography>
-
-          {/*********/}
-          {/* AREAS */}
-          {/*********/}
-          <Box className="containerStackWork">
-            {/***************************/}
-            {/* INVESTIGACION EDUCATIVA */}
-            {/***************************/}
-            <Box
-              width="100%"
-              display="flex"
-              flexDirection={{ xs: "column", lg: "row" }}
-              gap={{ xs: "20px", lg: "0px" }}
-            >
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="titleWork size25">
-                  Investigación educativa.
-                </Typography>
-
-                <Typography className="description size18">
-                  Diseña, coordina, elabora e implementa proyectos innovadores
-                  de investigación educativa.
-                </Typography>
-              </Box>
-
-              {/****************************/}
-              {/* INSTITUCIONES EDUCATIVAS */}
-              {/****************************/}
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="titleWork size25">
-                  Instituciones educativas.
-                </Typography>
-
-                <Typography className="description size18">
-                  Desarrolla y evalúa con eficiencia planes y programas de
-                  estudio para el logro de objetivos académicos.
-                </Typography>
-              </Box>
-            </Box>
-
-            <Box
-              width="100%"
-              display="flex"
-              flexDirection={{ xs: "column", lg: "row" }}
-              gap={{ xs: "20px", lg: "0px" }}
-            >
-              {/*****************************************/}
-              {/* COORDINADOR DE DEPARTAMENTO ACADEMICO */}
-              {/*****************************************/}
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="titleWork size25">
-                  Coordinador de departamento académico.
-                </Typography>
-
-                <Typography className="description size18">
-                  Motiva e involucra a los participantes de los procesos
-                  educativos a través de metodologías de gestión de proyectos.
-                </Typography>
-              </Box>
-
-              {/***********************/}
-              {/* PROCESOS EDUCATIVOS */}
-              {/***********************/}
-              <Box
-                className="contentStackWork"
-                padding={{ xs: "10px 20px", md: "15px 30px", xl: "20px 50px" }}
-              >
-                <Typography className="titleWork size25">
-                  Procesos educativos.
-                </Typography>
-
-                <Typography className="description size18">
-                  Realiza evaluaciones institucionales, curriculares y docentes
-                  para la mejora continua de las instituciones educativas.
-                </Typography>
-              </Box>
-            </Box>
+        {codeData === "program" &&  
+          <Box className="whereWork">
+            {/**********/}
+            {/* TITULO */}
+            {/**********/}
+            <Typography className="title size32">¿Dónde trabajar?</Typography>
+            
+            {/*********/}
+            {/* AREAS */}
+            {/*********/}
+            <Typography className="size20">
+              {listWorkProgram[posData].desc.split("\n").map(item => (
+                <>
+                  <b>{item.split("|")[0]}</b>{item.split("|")[1]}<br />
+                </>
+              ))}
+            </Typography>
           </Box>
-        </Box>
+        }
 
         {/*******************/}
         {/* PLAN DE ESTUDIO */}

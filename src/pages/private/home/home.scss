@@ -24,6 +24,7 @@
   // CONTENEDOR DE FILTRO
   .containerFilter {
     display: flex;
+    place-content: center;
     gap: 20px;
 
     // BOTON BUSCAR
@@ -39,6 +40,7 @@
 @media (max-width: 1000px) {
   .containerOfferAcademy {
     .containerFilter {
+      place-content: center;
       flex-wrap: wrap;
       .MuiFormControl-root {
         width: -webkit-fill-available;

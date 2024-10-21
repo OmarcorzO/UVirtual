@@ -16,9 +16,10 @@ import {
 
 // IMPORTADOS
 import "./undergraduate.scss";
-import { pensumCourses, selectArea } from "../../../components/dataApi/DataApi";
+import { pensumCourses } from "../../../components/dataApi/DataApi";
 import Banner from "../../../components/banner/Banner";
-import ImgBanner from "../../../assets/images/bannerUndergraduate.png";
+// import ImgBanner from "../../../assets/images/bannerUndergraduate.png";
+import ImgBanner from "../../../assets/images/imagen-microcerti.gif";
 import CustomerService from "../../../components/customerService/CustomerService";
 import IconSearch from "../../../assets/icons/IconSearch";
 import CardPensum from "../../../components/cardPensum/CardPensum";

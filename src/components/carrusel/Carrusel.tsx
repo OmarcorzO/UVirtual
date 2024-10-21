@@ -24,7 +24,7 @@ const Carrusel = ({ images }: CarruselProps) => {
     <div className="carrusel-fullscreen">
       <Slider {...settings}>
         {images.map((img, index) => {
-          console.log(img); return (
+          return (
             <div key={index} className="slide">
               <img src={img.image} alt={`Slide ${index + 1}`} />
             </div>

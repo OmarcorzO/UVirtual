@@ -25,6 +25,11 @@
       text-wrap: nowrap;
     }
   }
+  .infoPrice:hover {
+    .expanded {
+      scale: 1.1;
+    }
+  }
 }
 
 // CARTA AZUL

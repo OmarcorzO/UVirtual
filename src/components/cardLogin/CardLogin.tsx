@@ -41,7 +41,7 @@ const CardLogin = ({ children }: CardLoginProps) => {
         // sx={{ padding: "0px" }}
         // className="btnIcon"
         onClick={() => navigate("/home")}
-        sx={{ cursor: "pointer" }}
+        sx={{ cursor: "pointer", paddingTop: 5 }}
       >
         <LogoBlanco colorBlue="#ffffff" colorOrange="#ffffff" />
       </Box>

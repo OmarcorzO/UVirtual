@@ -15,7 +15,7 @@ const BannerVideo = ({ linkVideo, playlist }: BannerVideoProps) => {
         <iframe
           src={`${linkVideo}?controls=0&loop=1&mute=1&modestbranding=1${playlist}`}
           title="Video"
-          width="100%"
+          width="89%"
           height="100%"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           frameBorder="0"

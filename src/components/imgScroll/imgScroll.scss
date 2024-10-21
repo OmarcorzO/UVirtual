@@ -1,13 +1,11 @@
 .contentSlider {
-  max-width: 1500px;
-  margin: 0 auto;
+  max-width: 1600px;
 }
 
 .slider-container {
   width: auto;
   overflow: hidden;
   position: relative;
-  // height: 650px;
 
   .slick-slider {
     .slick-list {
@@ -17,9 +15,36 @@
       }
     }
   }
+
+  .btnCard {
+    border: 0.689px solid #fff;
+    border-radius: 68.891px;
+    padding: 6.889px 20.667px;
+    color: #fff;
+    text-transform: capitalize;
+    gap: 10px;
+    width: fit-content;
+
+    $time: 0.8s; /* TIEMPO */
+    transition-delay: $time;
+    transition: $time;
+    svg {
+      transition-delay: $time;
+      transition: $time;
+    }
+
+    // HOVER
+    &:hover {
+      padding-right: 28.667px !important;
+
+      svg {
+        transform: translateX(8px);
+      }
+    }
+  }
 }
 
-.sliderScroll {
+.slideScroll {
   flex: 0 0 450px;
   margin-right: 10px;
   position: relative;
@@ -27,13 +52,14 @@
   justify-content: center;
   align-items: center;
   max-height: 650px;
+  transition: ease-out 200ms;
 }
 
 .slideScroll img {
   max-width: 1100px;
-  width: 100%;
+  // width: 100%;
   max-height: 650px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .overlayScroll {
@@ -41,8 +67,16 @@
   bottom: 10px;
   left: 10px;
   color: white;
-  background: rgba(0, 0, 0, 0.5);
   padding: 10px;
+}
+
+.slideScroll .overlayScroll {
+  transition: ease-out 200ms;
+  opacity: 0;
+}
+.slideScroll:hover .overlayScroll {
+  opacity: 1;
+  transition: ease-out 200ms;
 }
 
 .overlayScroll h2 {
@@ -52,21 +86,7 @@
 .overlayScroll p {
   margin: 10px 0;
 }
-/* Estilos Responsivos */
-@media (max-width: 1750px) {
-  .slideScroll {
-    flex: 0 0 350px;
-  }
-}
-@media (max-width: 1024px) {
-  .slideScroll {
-    flex: 0 0 350px;
-  }
-}
 
-@media (max-width: 768px) {
-  .slideScroll {
-    flex: 0 0 100%;
-    margin-right: 0;
-  }
+.overlayScroll button {
+  cursor: pointer;
 }

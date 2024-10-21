@@ -42,8 +42,8 @@ function a11yProps(index: number) {
 
 const tabs = [
   { value: 1, path: 'about-us' },
-  { value: 3, path: 'teaching-staff' },
-  { value: 5, path: 'contact-us' },
+  { value: 2, path: 'teaching-staff' },
+  { value: 4, path: 'contact-us' },
 ];
 
 const DrawerContent = () => {
@@ -80,10 +80,10 @@ const DrawerContent = () => {
         >
           <Tab label="Oferta académica" {...a11yProps(0)} disableTouchRipple />
           <Tab label="Sobre UVirtual" {...a11yProps(1)} disableTouchRipple />
-          <Tab label="Business" {...a11yProps(2)} disableTouchRipple />
-          <Tab label="Claustro docente" {...a11yProps(3)} disableTouchRipple />
-          <Tab label="Investigación" {...a11yProps(4)} disableTouchRipple />
-          <Tab label="Contáctanos" {...a11yProps(5)} disableTouchRipple />
+          <Tab label="Claustro docente" {...a11yProps(2)} disableTouchRipple />
+          <Tab label="Investigación" {...a11yProps(3)} disableTouchRipple />
+          <Tab label="Contáctanos" {...a11yProps(4)} disableTouchRipple />
+          {/* <Tab label="Business" {...a11yProps(2)} disableTouchRipple /> */}
 
           <Box className="btnsNoTab">
             {/**********************/}
@@ -126,21 +126,21 @@ const DrawerContent = () => {
         {/************/}
         {/* BUSINESS */}
         {/************/}
-        <TabPanel value={value} index={2}>
+        {/* <TabPanel value={value} index={2}>
           Business
-        </TabPanel>
+        </TabPanel> */}
 
         {/*************/}
         {/* CLAUSTRO DOCENTE */}
         {/*************/}
-        <TabPanel value={value} index={3}>
+        <TabPanel value={value} index={2}>
           Claustro Docente
         </TabPanel>
 
         {/*************/}
         {/* SERVICIOS */}
         {/*************/}
-        <TabPanel value={value} index={4}>
+        <TabPanel value={value} index={3}>
           <Services />
         </TabPanel>
 

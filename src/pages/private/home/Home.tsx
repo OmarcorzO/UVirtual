@@ -28,6 +28,7 @@ import ReasonToStudy from "./components/reasonToStudy/ReasonToStudy";
 import CustomerService from "../../../components/customerService/CustomerService";
 import SliderCommit from "../../../components/sliderCommit/SliderCommit";
 import SliderHover from "../../../components/sliderHover/SliderHover";
+import ImgScroll from "../../../components/imgScroll/ImgScroll";
 // import data from "./data.json";
 
 const Home = () => {
@@ -166,7 +167,8 @@ const Home = () => {
           {/* SLIDER */}
           {/**********/}
           <Box className="contentSlider">
-            <SliderHover items={imgSliderProgram} />
+            <ImgScroll images={imgSliderProgram}/>
+            {/* <SliderHover items={imgSliderProgram} /> */}
 
             <br />
             {/*********/}
@@ -209,7 +211,8 @@ const Home = () => {
           {/* SLIDER */}
           {/**********/}
           <Box className="contentSlider">
-            <SliderHover items={imgSliderDoctorate} />
+            <ImgScroll images={imgSliderDoctorate} show={2}/>
+            {/* <SliderHover items={imgSliderDoctorate} /> */}
 
             <br />
             {/*********/}
@@ -218,7 +221,8 @@ const Home = () => {
             <Button
               disableTouchRipple
               className="btnInfo btnGradientOrangeCircle size16"
-              onClick={() => navigate("/doctorate")}
+              href="doctorate"
+              // onClick={() => navigate("/doctorate")}
             >
               EXPLORAR DOCTORADOS <IconArrowUpRight />
             </Button>

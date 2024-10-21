@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 
 // IMPORTADOS
 import Banner from "../../../components/banner/Banner";
+// import ImgBanner from "../../../assets/images/bannerAboutUs.png";
 import ImgBanner from "../../../assets/images/bannerAboutUs.png";
 import Counter from "../../../components/counter/Counter";
 import CardInfo from "../../../components/cardInfo/CardInfo";
@@ -186,7 +187,7 @@ const AboutUs = () => {
             justifyContent={"center"}
             useFlexGap
           >
-            <Box>
+            {/* <Box> */}
               {/**********************************/}
               {/* FLEXIBILIDAD Y PERSONALIZACIÓN */}
               {/**********************************/}
@@ -202,7 +203,7 @@ const AboutUs = () => {
                   colorDescription="#fff"
                 />
               </AnimatedContainer>
-            </Box>
+            {/* </Box> */}
 
             <Box display={"grid"} gap={{ xs: 1, sm: 2 }}>
               {/**************************/}

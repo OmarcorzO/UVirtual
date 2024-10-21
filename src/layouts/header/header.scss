@@ -1,11 +1,21 @@
+.pad100 {
+  padding: 100px 5% !important;
+}
+
+.pad50 {
+  padding: 50px 5% !important;
+}
+
 .containerHeader {
-  background-color: transparent;
+  // background-color: transparent;
+  // background-color: var(--colorBeige);
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   // padding: 50px 100px; /* 2.5% 5% */
-  padding: 100px 5%;
+  // padding: 100px 5%;
+  // padding: 50px 5%;
   display: flex;
   justify-content: space-between;
   z-index: 1;
@@ -185,3 +195,4 @@
     }
   }
 }
+

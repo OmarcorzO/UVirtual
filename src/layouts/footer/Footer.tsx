@@ -101,7 +101,7 @@ const Footer = () => {
           {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Egresados
           </Button> */}
-          <Button disableTouchRipple onClick={() => navigate("/teaching-staff")}>
+          <Button disableTouchRipple onClick={() =>  window.location.href = '/teaching-staff'} >
             Docentes
           </Button>
           {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
@@ -120,13 +120,13 @@ const Footer = () => {
           {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Centro de ayuda
           </Button> */}
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          <Button disableTouchRipple onClick={() => window.location.href ="/home" }>
             Políticas de privacidad
           </Button>
           {/* <Button disableTouchRipple onClick={() => navigate("/home")}>
             Políticas de cookies
           </Button> */}
-          <Button disableTouchRipple onClick={() => navigate("/home")}>
+          <Button disableTouchRipple onClick={() => window.location.href = "/home" }>
             Términos y Condiciones
           </Button>
         </Grid>

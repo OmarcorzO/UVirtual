@@ -1,19 +1,19 @@
 .cardItemNotification {
   width: 100%;
   max-width: 522px;
-  min-height: 308px;
+  min-height: 200px;
   border-radius: 20px;
   border: 1px solid #8a8a8e;
   // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   display: grid;
-  padding: 50px;
+  padding: 30px;
 
   .titleCard {
     color: var(--colorBlueDark);
     font-weight: 500;
     line-height: 110%; /* 27.5px */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     font-size: clamp(20px, 1dvw, 25px) !important;
     font-family: Poppins !important;
@@ -28,13 +28,13 @@
     color: var(--colorGrey);
     line-height: normal;
     letter-spacing: -0.18px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 
   .btnCard {
     border: 0.689px solid var(--colorBlueDark);
     border-radius: 68.891px;
-    padding: 6.889px 20.667px;
+    padding: 7px 20px;
     color: var(--colorBlueDark);
     text-transform: capitalize;
     gap: 10px;
